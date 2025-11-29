@@ -1,22 +1,18 @@
 using CRMWebSpa.Server.Services;
 using Serilog;
 
-// Configure Serilog
-Log.Logger = new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .Enrich.FromLogContext()
-    .WriteTo.Console()
-    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
-    .CreateLogger();
-
 try
 {
     Log.Information("Starting web application");
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add Serilog
-builder.Host.UseSerilog();
+// Configure Serilog
+builder.Host.UseSerilog((context, services, configuration) => configuration
+    .ReadFrom.Configuration(context.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day));
 
 // Add services to the container.
 builder.Services.AddControllers();
