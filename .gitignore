@@ -16,12 +16,20 @@ pnpm-debug.log*
 # .NET / Backend
 [Bb]in/
 [Oo]bj/
+publish/
 .vs/
 *.user
 *.suo
 *.userprefs
 *.launchsettings.json
 appsettings.Development.json
+
+# Build artifacts and binaries
+*.exe
+*.dll
+*.pdb
+*.cache
+*.log
 
 # IDEs and Editors
 .vscode/
@@ -33,3 +41,14 @@ Thumbs.db
 
 # OS Files
 Desktop.ini
+
+# Deployment scripts (keeping only deploy.ps1)
+deploy-*.ps1
+undeploy-*.ps1
+fix-*.ps1
+build-*.ps1
+check-*.ps1
+update-*.ps1
+deployment-*.bat
+DEPLOY.bat
+
