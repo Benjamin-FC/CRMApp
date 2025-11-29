@@ -209,6 +209,62 @@ CRMUI/
 - Axios
 - CSS3 with custom properties
 
+## Deployment to IIS
+
+### Quick Deployment
+
+For quick deployment to IIS, run as Administrator:
+
+```batch
+DEPLOY.bat
+```
+
+Or use PowerShell:
+
+```powershell
+.\deploy-iis.ps1
+```
+
+### Detailed Deployment Instructions
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment guide.
+
+### Deployment Scripts
+
+- **`deploy-iis.ps1`** - Full deployment to IIS
+- **`undeploy-iis.ps1`** - Remove from IIS
+- **`build-only.ps1`** - Build without deploying
+- **`check-prerequisites.ps1`** - Verify system requirements
+- **`update-appsettings.ps1`** - Update configuration
+- **`DEPLOY.bat`** - Quick deployment (Windows batch file)
+
+### Default IIS Configuration
+
+- **Site Name:** CRMUi
+- **Port:** 8080
+- **App Pool:** CRMUiAppPool
+- **Path:** C:\inetpub\wwwroot\CRMUi
+- **URL:** http://localhost:8080
+
+## Testing
+
+### Run All Tests
+
+```powershell
+cd CRMWebSpa.Tests
+dotnet test
+```
+
+### Test Coverage
+
+- **49 total tests** covering:
+  - Controller endpoints (14 tests)
+  - Service layer (29 tests)
+  - Models (6 tests)
+  - Integration tests (9 tests)
+
+See [CRMWebSpa.Tests/README.md](CRMWebSpa.Tests/README.md) for detailed test documentation.
+
 ## License
 
 This is a demo application for CRM integration.
