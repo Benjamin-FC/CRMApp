@@ -37,12 +37,20 @@ builder.Services.AddHttpClient<ICRMService, CRMService>();
 
 var app = builder.Build();
 
+// Configure for IIS sub-application deployment
+app.UsePathBase("/CRMUi");
+
+// Serve static files from wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/CRMUi/swagger/v1/swagger.json", "CRM Web SPA API V1");
+    c.RoutePrefix = "swagger";
+});
 
 app.UseCors("AllowReactApp");
 
@@ -51,6 +59,9 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Fallback to index.html for client-side routing
+app.MapFallbackToFile("index.html");
 
 // Add Serilog request logging
 app.UseSerilogRequestLogging();
