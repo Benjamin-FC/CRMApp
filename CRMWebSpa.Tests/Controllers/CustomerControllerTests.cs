@@ -31,7 +31,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "12345";
-        var token = "validtoken123";
+        var token = "123";
         var expectedCustomer = new CustomerInfo
         {
             Id = customerId,
@@ -92,7 +92,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "";
-        var token = "validtoken123";
+        var token = "123";
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
 
         // Act
@@ -107,7 +107,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "   ";
-        var token = "validtoken123";
+        var token = "123";
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
 
         // Act
@@ -122,7 +122,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "99999";
-        var token = "validtoken123";
+        var token = "123";
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
         
         _mockCrmService.Setup(s => s.GetCustomerInfoAsync(customerId, token))
@@ -140,7 +140,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "12345";
-        var token = "validtoken123";
+        var token = "123";
         var expectedCustomer = new CustomerInfo
         {
             Id = customerId,
@@ -164,7 +164,7 @@ public class CustomerControllerTests
     {
         // Arrange
         var customerId = "12345";
-        var expectedToken = "mytoken123";
+        var expectedToken = "123";
         var expectedCustomer = new CustomerInfo { Id = customerId };
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {expectedToken}";

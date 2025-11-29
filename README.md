@@ -227,7 +227,7 @@ Or use PowerShell:
 
 ### Detailed Deployment Instructions
 
-See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment guide.
+See [docs/deployment/DEPLOYMENT.md](docs/deployment/DEPLOYMENT.md) for comprehensive deployment guide.
 
 ### Deployment Scripts
 
@@ -238,6 +238,8 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment guide.
 - **`update-appsettings.ps1`** - Update configuration
 - **`DEPLOY.bat`** - Quick deployment (Windows batch file)
 
+See [docs/deployment/SCRIPTS.md](docs/deployment/SCRIPTS.md) for detailed script documentation.
+
 ### Default IIS Configuration
 
 - **Site Name:** CRMUi
@@ -245,6 +247,10 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for comprehensive deployment guide.
 - **App Pool:** CRMUiAppPool
 - **Path:** C:\inetpub\wwwroot\CRMUi
 - **URL:** http://localhost:8080
+
+## Quick Start
+
+For a quick walkthrough to get started, see [docs/QUICKSTART.md](docs/QUICKSTART.md).
 
 ## Testing
 

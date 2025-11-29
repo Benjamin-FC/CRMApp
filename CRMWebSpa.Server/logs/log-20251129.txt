@@ -1,0 +1,37 @@
+2025-11-29 11:48:21.978 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:48:22.024 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:48:22.037 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 11:48:22.039 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 11:48:22.039 -05:00 [INF] Hosting environment: Development
+2025-11-29 11:48:22.040 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 11:50:56.730 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-29 11:50:56.782 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 48.0410 ms
+2025-11-29 11:51:01.236 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 1.2242 ms
+2025-11-29 11:51:05.523 -05:00 [INF] Fetching customer info for customerId: 12345
+2025-11-29 11:51:05.623 -05:00 [WRN] Failed to retrieve customer info for customerId: 12345. Status code: "NotFound"
+2025-11-29 11:51:05.631 -05:00 [INF] HTTP GET /api/customer/12345 responded 404 in 114.1353 ms
+2025-11-29 11:52:13.818 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:52:13.873 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:52:13.886 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 11:52:13.888 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 11:52:13.888 -05:00 [INF] Hosting environment: Development
+2025-11-29 11:52:13.889 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 11:52:34.204 -05:00 [INF] Application is shutting down...
+2025-11-29 11:52:41.004 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:52:41.060 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:52:41.072 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 11:52:41.074 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 11:52:41.075 -05:00 [INF] Hosting environment: Development
+2025-11-29 11:52:41.075 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 11:52:43.842 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-29 11:52:43.846 -05:00 [INF] HTTP GET /index.html responded 404 in 0.4051 ms
+2025-11-29 11:52:52.809 -05:00 [INF] HTTP GET /index.html responded 404 in 0.0432 ms
+2025-11-29 11:52:57.039 -05:00 [INF] Application is shutting down...
+2025-11-29 11:53:05.554 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:53:05.620 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 11:53:05.632 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 11:53:05.636 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 11:53:05.637 -05:00 [INF] Hosting environment: Development
+2025-11-29 11:53:05.638 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 11:53:55.431 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-29 11:53:55.438 -05:00 [INF] HTTP GET /index.html responded 404 in 0.4879 ms

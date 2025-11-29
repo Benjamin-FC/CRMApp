@@ -26,6 +26,12 @@ public class CustomerController : ControllerBase
         }
 
         var token = authHeader.Substring("Bearer ".Length).Trim();
+        
+        // Validate token
+        if (token != "123")
+        {
+            return Unauthorized(new { message = "Invalid token" });
+        }
 
         if (string.IsNullOrWhiteSpace(customerId))
         {

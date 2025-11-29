@@ -1,4 +1,5 @@
 using CRMWebSpa.Server.Services;
+using Microsoft.OpenApi.Models;
 using Serilog;
 
 try
@@ -17,7 +18,41 @@ builder.Host.UseSerilog((context, services, configuration) => configuration
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Title = "CRM Web SPA API",
+        Version = "v1",
+        Description = "API for CRM customer information with OAuth authentication"
+    });
+
+    // Add Bearer token authentication to Swagger
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        In = ParameterLocation.Header,
+        Description = "Enter 'Bearer 123' to authorize (token is '123')"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
 
 // Add CORS for React frontend
 builder.Services.AddCors(options =>
