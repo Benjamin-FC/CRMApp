@@ -13,19 +13,25 @@ public class CRMService : ICRMService
 {
     private readonly HttpClient _httpClient;
     private readonly IConfiguration _configuration;
+    private readonly ILogger<CRMService> _logger;
 
-    public CRMService(HttpClient httpClient, IConfiguration configuration)
+    public CRMService(HttpClient httpClient, IConfiguration configuration, ILogger<CRMService> logger)
     {
         _httpClient = httpClient;
         _configuration = configuration;
+        _logger = logger;
     }
 
     public async Task<CustomerInfo?> GetCustomerInfoAsync(string customerId, string token)
     {
         try
         {
+            _logger.LogInformation("Fetching customer info for customerId: {CustomerId}", customerId);
+            
             var baseUrl = _configuration["CRMBackend:BaseUrl"] ?? "http://localhost/CRMbackend";
             var url = $"{baseUrl}/api/v1/ClientData/{customerId}";
+
+            _logger.LogDebug("Making request to CRM backend: {Url}", url);
 
             var request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
@@ -40,16 +46,17 @@ public class CRMService : ICRMService
                     PropertyNameCaseInsensitive = true
                 });
 
+                _logger.LogInformation("Successfully retrieved customer info for customerId: {CustomerId}", customerId);
                 return customerInfo;
             }
             
-            // Log error or handle specific status codes if needed
+            _logger.LogWarning("Failed to retrieve customer info for customerId: {CustomerId}. Status code: {StatusCode}", 
+                customerId, response.StatusCode);
             return null;
         }
         catch (Exception ex)
         {
-            // Log exception
-            Console.WriteLine($"Error fetching customer info: {ex.Message}");
+            _logger.LogError(ex, "Error fetching customer info for customerId: {CustomerId}", customerId);
             return null;
         }
     }

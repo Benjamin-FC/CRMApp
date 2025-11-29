@@ -1,6 +1,22 @@
 using CRMWebSpa.Server.Services;
+using Serilog;
+
+// Configure Serilog
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+try
+{
+    Log.Information("Starting web application");
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Add Serilog
+builder.Host.UseSerilog();
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -40,5 +56,16 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-app.Run();
+// Add Serilog request logging
+app.UseSerilogRequestLogging();
 
+app.Run();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
