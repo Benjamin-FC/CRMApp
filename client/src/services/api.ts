@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost/CRMUi/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost/CRMUi/api';
 
 const api = axios.create({
     baseURL: API_BASE_URL,
@@ -30,16 +30,14 @@ export interface LoginResponse {
 }
 
 export interface CustomerInfo {
-    id: string;
-    firstName: string;
-    lastName: string;
-    email: string;
-    phone: string;
-    address: string;
-    city: string;
-    state: string;
-    zipCode: string;
-    createdDate: string;
+    clientId: string;
+    editApproval: string;
+    dba: string;
+    clientLegalName: string;
+    complianceHold: string;
+    level: string;
+    paymentTermID: string;
+    paymentMethod: string;
     status: string;
 }
 

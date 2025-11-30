@@ -34,10 +34,10 @@ public class CustomerControllerTests
         var token = "123";
         var expectedCustomer = new CustomerInfo
         {
-            Id = customerId,
-            FirstName = "John",
-            LastName = "Doe",
-            Email = "john@example.com"
+            ClientId = customerId,
+            Dba = "Test Company",
+            ClientLegalName = "Test Company LLC",
+            Status = "Active"
         };
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
@@ -52,10 +52,10 @@ public class CustomerControllerTests
         var okResult = result.Result as OkObjectResult;
         var customer = okResult!.Value as CustomerInfo;
         customer.Should().NotBeNull();
-        customer!.Id.Should().Be(customerId);
-        customer.FirstName.Should().Be("John");
-        customer.LastName.Should().Be("Doe");
-        customer.Email.Should().Be("john@example.com");
+        customer!.ClientId.Should().Be(customerId);
+        customer.Dba.Should().Be("Test Company");
+        customer.ClientLegalName.Should().Be("Test Company LLC");
+        customer.Status.Should().Be("Active");
     }
 
     [Fact]
@@ -143,9 +143,9 @@ public class CustomerControllerTests
         var token = "123";
         var expectedCustomer = new CustomerInfo
         {
-            Id = customerId,
-            FirstName = "John",
-            LastName = "Doe"
+            ClientId = customerId,
+            Dba = "Test Company",
+            ClientLegalName = "Test Company LLC"
         };
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
@@ -165,7 +165,7 @@ public class CustomerControllerTests
         // Arrange
         var customerId = "12345";
         var expectedToken = "123";
-        var expectedCustomer = new CustomerInfo { Id = customerId };
+        var expectedCustomer = new CustomerInfo { ClientId = customerId };
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {expectedToken}";
         

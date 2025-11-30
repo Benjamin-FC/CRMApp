@@ -80,10 +80,17 @@ app.UseDefaultFiles();
 app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
-app.UseSwagger();
+app.UseSwagger(c =>
+{
+    c.RouteTemplate = "swagger/{documentName}/swagger.json";
+    c.PreSerializeFilters.Add((swaggerDoc, httpReq) =>
+    {
+        swaggerDoc.Servers = new List<OpenApiServer> { new OpenApiServer { Url = $"{httpReq.Scheme}://{httpReq.Host.Value}/CRMUi" } };
+    });
+});
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/CRMUi/swagger/swagger.json", "CRM Web SPA API V1");
+    c.SwaggerEndpoint("/CRMUi/swagger/swagger.json", "CRM Web SPA API");
     c.RoutePrefix = "swagger";
 });
 

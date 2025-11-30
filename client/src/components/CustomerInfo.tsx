@@ -32,19 +32,6 @@ export default function CustomerInfo() {
         navigate('/');
     };
 
-    const formatDate = (dateString: string) => {
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-        });
-    };
-
-    const getInitials = (firstName: string, lastName: string) => {
-        return `${firstName.charAt(0)}${lastName.charAt(0)}`.toUpperCase();
-    };
-
     return (
         <div className="customer-page">
             <nav className="navbar">
@@ -105,51 +92,46 @@ export default function CustomerInfo() {
                     <div className="customer-info-card">
                         <div className="customer-header">
                             <div className="customer-avatar">
-                                {getInitials(customer.firstName, customer.lastName)}
+                                {customer.clientLegalName.charAt(0).toUpperCase()}
                             </div>
                             <div className="customer-header-info">
                                 <h2 className="customer-name">
-                                    {customer.firstName} {customer.lastName}
+                                    {customer.clientLegalName}
                                 </h2>
-                                <p className="customer-id">ID: {customer.id}</p>
+                                <p className="customer-id">ID: {customer.clientId}</p>
                             </div>
                             <div className="status-badge">{customer.status}</div>
                         </div>
 
                         <div className="customer-details">
                             <div className="detail-item">
-                                <div className="detail-label">Email Address</div>
-                                <div className="detail-value">{customer.email}</div>
+                                <div className="detail-label">DBA</div>
+                                <div className="detail-value">{customer.dba}</div>
                             </div>
 
                             <div className="detail-item">
-                                <div className="detail-label">Phone Number</div>
-                                <div className="detail-value">{customer.phone}</div>
+                                <div className="detail-label">Edit Approval</div>
+                                <div className="detail-value">{customer.editApproval}</div>
                             </div>
 
                             <div className="detail-item">
-                                <div className="detail-label">Street Address</div>
-                                <div className="detail-value">{customer.address}</div>
+                                <div className="detail-label">Compliance Hold</div>
+                                <div className="detail-value">{customer.complianceHold}</div>
                             </div>
 
                             <div className="detail-item">
-                                <div className="detail-label">City</div>
-                                <div className="detail-value">{customer.city}</div>
+                                <div className="detail-label">Level</div>
+                                <div className="detail-value">{customer.level}</div>
                             </div>
 
                             <div className="detail-item">
-                                <div className="detail-label">State</div>
-                                <div className="detail-value">{customer.state}</div>
+                                <div className="detail-label">Payment Term ID</div>
+                                <div className="detail-value">{customer.paymentTermID}</div>
                             </div>
 
                             <div className="detail-item">
-                                <div className="detail-label">Zip Code</div>
-                                <div className="detail-value">{customer.zipCode}</div>
-                            </div>
-
-                            <div className="detail-item">
-                                <div className="detail-label">Customer Since</div>
-                                <div className="detail-value">{formatDate(customer.createdDate)}</div>
+                                <div className="detail-label">Payment Method</div>
+                                <div className="detail-value">{customer.paymentMethod}</div>
                             </div>
 
                             <div className="detail-item">

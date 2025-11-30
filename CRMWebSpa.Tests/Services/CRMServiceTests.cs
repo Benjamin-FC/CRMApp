@@ -40,10 +40,10 @@ public class CRMServiceTests
         var token = "validtoken";
         var expectedCustomer = new CustomerInfo
         {
-            Id = customerId,
-            FirstName = "John",
-            LastName = "Doe",
-            Email = "john@example.com"
+            ClientId = customerId,
+            Dba = "Test Company",
+            ClientLegalName = "Test Company LLC",
+            Status = "Active"
         };
 
         var jsonResponse = JsonSerializer.Serialize(expectedCustomer);
@@ -65,10 +65,10 @@ public class CRMServiceTests
 
         // Assert
         result.Should().NotBeNull();
-        result!.Id.Should().Be(customerId);
-        result.FirstName.Should().Be("John");
-        result.LastName.Should().Be("Doe");
-        result.Email.Should().Be("john@example.com");
+        result!.ClientId.Should().Be(customerId);
+        result.Dba.Should().Be("Test Company");
+        result.ClientLegalName.Should().Be("Test Company LLC");
+        result.Status.Should().Be("Active");
     }
 
     [Fact]
@@ -200,7 +200,7 @@ public class CRMServiceTests
         // Assert
         capturedRequest.Should().NotBeNull();
         capturedRequest!.RequestUri.Should().NotBeNull();
-        capturedRequest.RequestUri!.ToString().Should().Be("http://localhost/CRMbackend/api/ClientData/12345");
+        capturedRequest.RequestUri!.ToString().Should().Be("http://localhost/CRMbackend/api/Customer/info/12345");
     }
 
     [Fact]
@@ -237,7 +237,7 @@ public class CRMServiceTests
         // Arrange
         var customerId = "12345";
         var token = "validtoken";
-        var expectedCustomer = new CustomerInfo { Id = customerId };
+        var expectedCustomer = new CustomerInfo { ClientId = customerId };
 
         _mockHttpMessageHandler.Protected()
             .Setup<Task<HttpResponseMessage>>(
@@ -299,7 +299,7 @@ public class CRMServiceTests
     public async Task GetCustomerInfoAsync_WorksWithDifferentCustomerIds(string customerId, string token)
     {
         // Arrange
-        var expectedCustomer = new CustomerInfo { Id = customerId };
+        var expectedCustomer = new CustomerInfo { ClientId = customerId };
 
         _mockHttpMessageHandler.Protected()
             .Setup<Task<HttpResponseMessage>>(
@@ -317,6 +317,6 @@ public class CRMServiceTests
 
         // Assert
         result.Should().NotBeNull();
-        result!.Id.Should().Be(customerId);
+        result!.ClientId.Should().Be(customerId);
     }
 }

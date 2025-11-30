@@ -46,18 +46,26 @@ public class ModelValidationTests
         // Arrange & Act
         var customer = new CustomerInfo
         {
-            Id = "12345",
-            FirstName = "John",
-            LastName = "Doe",
-            Email = "john@example.com"
+            ClientId = "12345",
+            Dba = "Test Company",
+            ClientLegalName = "Test Company LLC",
+            ComplianceHold = "N",
+            Level = "Gold",
+            PaymentTermID = "NET30",
+            PaymentMethod = "ACH",
+            Status = "Active"
         };
 
         // Assert
         customer.Should().NotBeNull();
-        customer.Id.Should().Be("12345");
-        customer.FirstName.Should().Be("John");
-        customer.LastName.Should().Be("Doe");
-        customer.Email.Should().Be("john@example.com");
+        customer.ClientId.Should().Be("12345");
+        customer.Dba.Should().Be("Test Company");
+        customer.ClientLegalName.Should().Be("Test Company LLC");
+        customer.ComplianceHold.Should().Be("N");
+        customer.Level.Should().Be("Gold");
+        customer.PaymentTermID.Should().Be("NET30");
+        customer.PaymentMethod.Should().Be("ACH");
+        customer.Status.Should().Be("Active");
     }
 
     [Fact]
@@ -94,22 +102,30 @@ public class ModelValidationTests
     }
 
     [Fact]
-    public void CustomerInfo_CanHaveNullProperties()
+    public void CustomerInfo_CanHaveEmptyProperties()
     {
         // Arrange & Act
         var customer = new CustomerInfo
         {
-            Id = string.Empty,
-            FirstName = string.Empty,
-            LastName = string.Empty,
-            Email = string.Empty
+            ClientId = string.Empty,
+            Dba = string.Empty,
+            ClientLegalName = string.Empty,
+            ComplianceHold = string.Empty,
+            Level = string.Empty,
+            PaymentTermID = string.Empty,
+            PaymentMethod = string.Empty,
+            Status = string.Empty
         };
 
         // Assert
         customer.Should().NotBeNull();
-        customer.Id.Should().BeEmpty();
-        customer.FirstName.Should().BeEmpty();
-        customer.LastName.Should().BeEmpty();
-        customer.Email.Should().BeEmpty();
+        customer.ClientId.Should().BeEmpty();
+        customer.Dba.Should().BeEmpty();
+        customer.ClientLegalName.Should().BeEmpty();
+        customer.ComplianceHold.Should().BeEmpty();
+        customer.Level.Should().BeEmpty();
+        customer.PaymentTermID.Should().BeEmpty();
+        customer.PaymentMethod.Should().BeEmpty();
+        customer.Status.Should().BeEmpty();
     }
 }

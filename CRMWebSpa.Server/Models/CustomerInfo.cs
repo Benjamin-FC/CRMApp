@@ -2,15 +2,13 @@ namespace CRMWebSpa.Server.Models;
 
 public class CustomerInfo
 {
-    public string Id { get; set; } = string.Empty;
-    public string FirstName { get; set; } = string.Empty;
-    public string LastName { get; set; } = string.Empty;
-    public string Email { get; set; } = string.Empty;
-    public string Phone { get; set; } = string.Empty;
-    public string Address { get; set; } = string.Empty;
-    public string City { get; set; } = string.Empty;
-    public string State { get; set; } = string.Empty;
-    public string ZipCode { get; set; } = string.Empty;
-    public DateTime CreatedDate { get; set; }
+    public string ClientId { get; set; } = string.Empty;
+    public string EditApproval { get; set; } = string.Empty;
+    public string Dba { get; set; } = string.Empty;
+    public string ClientLegalName { get; set; } = string.Empty;
+    public string ComplianceHold { get; set; } = string.Empty;
+    public string Level { get; set; } = string.Empty;
+    public string PaymentTermID { get; set; } = string.Empty;
+    public string PaymentMethod { get; set; } = string.Empty;
     public string Status { get; set; } = string.Empty;
 }

@@ -29,7 +29,7 @@ public class CRMService : ICRMService
             _logger.LogInformation("Fetching customer info for customerId: {CustomerId}", customerId);
             
             var baseUrl = _configuration["CRMBackend:BaseUrl"] ?? "http://localhost/CRMbackend";
-            var url = $"{baseUrl}/api/ClientData/{customerId}";
+            var url = $"{baseUrl}/api/Customer/info/{customerId}";
 
             _logger.LogDebug("Making request to CRM backend: {Url}", url);
 
