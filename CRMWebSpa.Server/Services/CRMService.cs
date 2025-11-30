@@ -31,7 +31,7 @@ public class CRMService : ICRMService
             var baseUrl = _configuration["CRMBackend:BaseUrl"] ?? "http://localhost/CRMbackend";
             var url = $"{baseUrl}/api/Customer/info/{customerId}";
 
-            _logger.LogDebug("Making request to CRM backend: {Url}", url);
+            _logger.LogInformation("Making request to CRM backend: {Url}", url);
 
             var request = new HttpRequestMessage(HttpMethod.Get, url);
             request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
