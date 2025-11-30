@@ -58,3 +58,4 @@ Or simply run: `.\deploy.ps1` (as Administrator)
 ### Next Steps
 
 The application is now live and accessible at http://localhost/CRMUi
+# This file has been removed as part of documentation cleanup.

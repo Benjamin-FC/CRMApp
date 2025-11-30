@@ -176,3 +176,4 @@ dotnet test
 ---
 
 **Ready to deploy?** Right-click `DEPLOY.bat` and select "Run as Administrator"! 🚀
+# This file has been removed as part of documentation cleanup.

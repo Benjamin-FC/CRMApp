@@ -276,3 +276,4 @@ Get-Content "C:\inetpub\wwwroot\CRMUi\logs\log-*.txt" -Tail 20
 ```powershell
 Test-NetConnection -ComputerName localhost -Port 8080
 ```
+# This file has been removed as part of documentation cleanup.

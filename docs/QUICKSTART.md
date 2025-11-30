@@ -103,3 +103,4 @@ After deployment, your app will be available at:
 ## Need More Help?
 
 See detailed documentation in [DEPLOYMENT.md](DEPLOYMENT.md)
+# This file has been removed as part of documentation cleanup.

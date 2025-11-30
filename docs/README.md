@@ -59,3 +59,4 @@ When adding new documentation:
 - Check the [Main README](../README.md) for project overview
 - Review [QUICKSTART.md](QUICKSTART.md) for setup instructions
 - Consult [Deployment Guide](deployment/DEPLOYMENT.md) for IIS deployment
+# This file has been removed as part of documentation cleanup.

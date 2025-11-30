@@ -369,3 +369,4 @@ For issues or questions:
 Get-WebSite -Name "CRMUi"
 Get-WebAppPool -Name "CRMUiAppPool"
 ```
+# This file has been removed as part of documentation cleanup.
