@@ -26,7 +26,7 @@ The CRMWebSpa application has been successfully deployed to IIS.
 
 ✅ Main endpoint: http://localhost/CRMUi - Returns 200 OK
 ✅ Swagger UI: http://localhost/CRMUi/swagger - Loads successfully
-✅ Swagger JSON: http://localhost/CRMUi/swagger/v1/swagger.json - Returns valid OpenAPI spec (4455 bytes)
+✅ Swagger JSON: http://localhost/CRMUi/swagger/swagger.json - Returns valid OpenAPI spec (4455 bytes)
 
 ### Files Created/Modified
 

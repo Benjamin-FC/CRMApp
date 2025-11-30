@@ -35,3 +35,264 @@
 2025-11-29 11:53:05.638 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
 2025-11-29 11:53:55.431 -05:00 [WRN] Failed to determine the https port for redirect.
 2025-11-29 11:53:55.438 -05:00 [INF] HTTP GET /index.html responded 404 in 0.4879 ms
+2025-11-29 18:41:16.393 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 18:41:16.460 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 18:41:16.481 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 18:41:16.483 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 18:41:16.483 -05:00 [INF] Hosting environment: Development
+2025-11-29 18:41:16.484 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 18:44:27.964 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-29 18:44:27.968 -05:00 [INF] HTTP POST /api/Auth/login responded 405 in 0.2851 ms
+2025-11-29 18:44:37.711 -05:00 [INF] HTTP POST /api/Auth/login responded 405 in 0.0350 ms
+2025-11-29 18:46:53.250 -05:00 [INF] HTTP GET /index.html responded 404 in 0.1523 ms
+2025-11-29 18:47:38.847 -05:00 [INF] HTTP GET /index.html responded 404 in 0.0145 ms
+2025-11-29 18:48:53.651 -05:00 [INF] HTTP GET /index.html responded 404 in 0.0166 ms
+2025-11-29 18:53:13.282 -05:00 [INF] Application is shutting down...
+2025-11-29 18:53:13.283 -05:00 [DBG] Hosting stopping
+2025-11-29 18:53:13.288 -05:00 [DBG] Hosting stopped
+2025-11-29 18:53:26.178 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 18:53:26.204 -05:00 [DBG] Hosting starting
+2025-11-29 18:53:26.225 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 18:53:26.238 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 18:53:26.238 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 18:53:26.239 -05:00 [INF] Hosting environment: Development
+2025-11-29 18:53:26.240 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 18:53:26.240 -05:00 [DBG] Hosting started
+2025-11-29 18:56:54.663 -05:00 [DBG] Config reload token fired. Checking for changes...
+2025-11-29 19:12:05.797 -05:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2025-11-29 19:12:05.855 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 19:12:05.860 -05:00 [DBG] Hosting starting
+2025-11-29 19:12:05.878 -05:00 [WRN] The WebRootPath was not found: D:\_DELETE_\CRMUI\CRMWebSpa.Server\wwwroot. Static files may be unavailable.
+2025-11-29 19:12:05.890 -05:00 [INF] Now listening on: http://localhost:5037
+2025-11-29 19:12:05.891 -05:00 [DBG] Loaded hosting startup assembly CRMWebSpa.Server
+2025-11-29 19:12:05.891 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-11-29 19:12:05.892 -05:00 [INF] Hosting environment: Development
+2025-11-29 19:12:05.893 -05:00 [INF] Content root path: D:\_DELETE_\CRMUI\CRMWebSpa.Server
+2025-11-29 19:12:05.893 -05:00 [DBG] Hosting started
+2025-11-29 19:13:44.541 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" accepted.
+2025-11-29 19:13:44.551 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" started.
+2025-11-29 19:13:44.570 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/ - null null
+2025-11-29 19:13:44.575 -05:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2025-11-29 19:13:44.586 -05:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-11-29 19:13:44.590 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+2025-11-29 19:13:44.591 -05:00 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:13:44.593 -05:00 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-11-29 19:13:44.595 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' already set, skipping route matching.
+2025-11-29 19:13:44.597 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:13:44.605 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:13:44.606 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-11-29 19:13:44.609 -05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:13:44.610 -05:00 [DBG] The request path /index.html does not match an existing file
+2025-11-29 19:13:44.611 -05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:13:44.613 -05:00 [INF] HTTP GET /index.html responded 404 in 3.7102 ms
+2025-11-29 19:13:44.617 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" completed keep alive response.
+2025-11-29 19:13:44.619 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/index.html - 404 0 null 49.5616ms
+2025-11-29 19:13:44.623 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5037/index.html, Response status code: 404
+2025-11-29 19:13:44.642 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" received FIN.
+2025-11-29 19:13:44.645 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:13:44.647 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" disconnecting.
+2025-11-29 19:13:44.648 -05:00 [DBG] Connection id "0HNHFKL9JE4KU" stopped.
+2025-11-29 19:14:33.747 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" accepted.
+2025-11-29 19:14:33.748 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" started.
+2025-11-29 19:14:33.750 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/ - null null
+2025-11-29 19:14:33.752 -05:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-11-29 19:14:33.753 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+2025-11-29 19:14:33.755 -05:00 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:33.756 -05:00 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-11-29 19:14:33.758 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' already set, skipping route matching.
+2025-11-29 19:14:33.759 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:33.760 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:33.761 -05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:33.762 -05:00 [DBG] The request path /index.html does not match an existing file
+2025-11-29 19:14:33.763 -05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:33.764 -05:00 [INF] HTTP GET /index.html responded 404 in 2.8271 ms
+2025-11-29 19:14:33.766 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" completed keep alive response.
+2025-11-29 19:14:33.767 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/index.html - 404 0 null 17.2976ms
+2025-11-29 19:14:33.770 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5037/index.html, Response status code: 404
+2025-11-29 19:14:33.790 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" received FIN.
+2025-11-29 19:14:33.791 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" disconnecting.
+2025-11-29 19:14:33.792 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:14:33.805 -05:00 [DBG] Connection id "0HNHFKL9JE4KV" stopped.
+2025-11-29 19:14:36.816 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" accepted.
+2025-11-29 19:14:36.829 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" started.
+2025-11-29 19:14:36.835 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/ - null null
+2025-11-29 19:14:36.842 -05:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-11-29 19:14:36.844 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+2025-11-29 19:14:36.845 -05:00 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:36.846 -05:00 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-11-29 19:14:36.848 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' already set, skipping route matching.
+2025-11-29 19:14:36.849 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:36.850 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:36.851 -05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:36.852 -05:00 [DBG] The request path /index.html does not match an existing file
+2025-11-29 19:14:36.853 -05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:14:36.853 -05:00 [INF] HTTP GET /index.html responded 404 in 2.8114 ms
+2025-11-29 19:14:36.855 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" completed keep alive response.
+2025-11-29 19:14:36.856 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/index.html - 404 0 null 21.1243ms
+2025-11-29 19:14:36.857 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" received FIN.
+2025-11-29 19:14:36.859 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5037/index.html, Response status code: 404
+2025-11-29 19:14:36.860 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:14:36.863 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" disconnecting.
+2025-11-29 19:14:36.864 -05:00 [DBG] Connection id "0HNHFKL9JE4L0" stopped.
+2025-11-29 19:14:50.659 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" accepted.
+2025-11-29 19:14:50.660 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" started.
+2025-11-29 19:14:50.661 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5037/api/auth/login - application/json 37
+2025-11-29 19:14:50.663 -05:00 [DBG] 1 candidate(s) found for the request path '/api/auth/login'
+2025-11-29 19:14:50.666 -05:00 [DBG] Endpoint 'CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server)' with route pattern 'api/Auth/login' is valid for the request path '/api/auth/login'
+2025-11-29 19:14:50.667 -05:00 [DBG] Request matched endpoint 'CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server)'
+2025-11-29 19:14:50.670 -05:00 [DBG] Endpoint 'CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server)' already set, skipping route matching.
+2025-11-29 19:14:50.672 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:50.673 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:14:50.674 -05:00 [INF] Executing endpoint 'CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server)'
+2025-11-29 19:14:50.689 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[CRMWebSpa.Server.Models.LoginResponse]] Login(CRMWebSpa.Server.Models.LoginRequest) on controller CRMWebSpa.Server.Controllers.AuthController (CRMWebSpa.Server).
+2025-11-29 19:14:50.691 -05:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2025-11-29 19:14:50.692 -05:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2025-11-29 19:14:50.692 -05:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2025-11-29 19:14:50.693 -05:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2025-11-29 19:14:50.694 -05:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2025-11-29 19:14:50.696 -05:00 [DBG] Executing controller factory for controller CRMWebSpa.Server.Controllers.AuthController (CRMWebSpa.Server)
+2025-11-29 19:14:50.699 -05:00 [DBG] Executed controller factory for controller CRMWebSpa.Server.Controllers.AuthController (CRMWebSpa.Server)
+2025-11-29 19:14:50.702 -05:00 [DBG] Attempting to bind parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest' ...
+2025-11-29 19:14:50.704 -05:00 [DBG] Attempting to bind parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest' using the name '' in request data ...
+2025-11-29 19:14:50.705 -05:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-11-29 19:14:50.729 -05:00 [DBG] Connection id "0HNHFKL9JE4L1", Request id "0HNHFKL9JE4L1:00000001": started reading request body.
+2025-11-29 19:14:50.730 -05:00 [DBG] Connection id "0HNHFKL9JE4L1", Request id "0HNHFKL9JE4L1:00000001": done reading request body.
+2025-11-29 19:14:50.736 -05:00 [DBG] JSON input formatter succeeded, deserializing to type 'CRMWebSpa.Server.Models.LoginRequest'
+2025-11-29 19:14:50.737 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest'.
+2025-11-29 19:14:50.738 -05:00 [DBG] Done attempting to bind parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest'.
+2025-11-29 19:14:50.738 -05:00 [DBG] Attempting to validate the bound parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest' ...
+2025-11-29 19:14:50.742 -05:00 [DBG] Done attempting to validate the bound parameter 'request' of type 'CRMWebSpa.Server.Models.LoginRequest'.
+2025-11-29 19:14:50.745 -05:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2025-11-29 19:14:50.746 -05:00 [DBG] No information found on request to perform content negotiation.
+2025-11-29 19:14:50.747 -05:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-11-29 19:14:50.747 -05:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2025-11-29 19:14:50.748 -05:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-11-29 19:14:50.748 -05:00 [INF] Executing OkObjectResult, writing value of type 'CRMWebSpa.Server.Models.LoginResponse'.
+2025-11-29 19:14:50.759 -05:00 [INF] Executed action CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server) in 62.7472ms
+2025-11-29 19:14:50.760 -05:00 [INF] Executed endpoint 'CRMWebSpa.Server.Controllers.AuthController.Login (CRMWebSpa.Server)'
+2025-11-29 19:14:50.761 -05:00 [INF] HTTP POST /api/auth/login responded 200 in 86.7331 ms
+2025-11-29 19:14:50.762 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" completed keep alive response.
+2025-11-29 19:14:50.762 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5037/api/auth/login - 200 null application/json; charset=utf-8 101.3776ms
+2025-11-29 19:14:50.763 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" received FIN.
+2025-11-29 19:14:50.765 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:14:50.765 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" disconnecting.
+2025-11-29 19:14:50.782 -05:00 [DBG] Connection id "0HNHFKL9JE4L1" stopped.
+2025-11-29 19:16:50.697 -05:00 [DBG] HttpMessageHandler expired after 120000ms for client 'IAuthService'
+2025-11-29 19:17:00.725 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:00.738 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0415ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:17:01.713 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" accepted.
+2025-11-29 19:17:01.716 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" started.
+2025-11-29 19:17:01.718 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/ - null null
+2025-11-29 19:17:01.720 -05:00 [DBG] 1 candidate(s) found for the request path '/'
+2025-11-29 19:17:01.721 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/'
+2025-11-29 19:17:01.722 -05:00 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:17:01.723 -05:00 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-11-29 19:17:01.724 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' already set, skipping route matching.
+2025-11-29 19:17:01.725 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:17:01.725 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:17:01.726 -05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:17:01.727 -05:00 [DBG] The request path /index.html does not match an existing file
+2025-11-29 19:17:01.730 -05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:17:01.732 -05:00 [INF] HTTP GET /index.html responded 404 in 5.9117 ms
+2025-11-29 19:17:01.737 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" completed keep alive response.
+2025-11-29 19:17:01.738 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/index.html - 404 0 null 20.4156ms
+2025-11-29 19:17:01.740 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5037/index.html, Response status code: 404
+2025-11-29 19:17:01.761 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" received FIN.
+2025-11-29 19:17:01.762 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:17:01.764 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" disconnecting.
+2025-11-29 19:17:01.765 -05:00 [DBG] Connection id "0HNHFKL9JE4L2" stopped.
+2025-11-29 19:17:10.742 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:10.744 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0045ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:17:20.756 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:20.765 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0032ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:17:30.776 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:30.784 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:17:40.785 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:40.788 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0044ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:17:50.801 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:17:50.807 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.1997ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:00.816 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:00.829 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0107ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:10.848 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:10.849 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0023ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:20.864 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:20.871 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0024ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:26.153 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" accepted.
+2025-11-29 19:18:26.155 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" started.
+2025-11-29 19:18:26.155 -05:00 [DBG] Connection id "0HNHFKL9JE4L4" accepted.
+2025-11-29 19:18:26.158 -05:00 [DBG] Connection id "0HNHFKL9JE4L4" started.
+2025-11-29 19:18:26.158 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/swagger/index.html - null null
+2025-11-29 19:18:26.161 -05:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-11-29 19:18:26.164 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-11-29 19:18:26.166 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-11-29 19:18:26.167 -05:00 [DBG] Request did not match any endpoints
+2025-11-29 19:18:26.169 -05:00 [DBG] 1 candidate(s) found for the request path '/swagger/index.html'
+2025-11-29 19:18:26.170 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/index.html' for the request path '/swagger/index.html'
+2025-11-29 19:18:26.172 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/index.html'
+2025-11-29 19:18:26.173 -05:00 [DBG] Request did not match any endpoints
+2025-11-29 19:18:26.174 -05:00 [DBG] The request path /swagger/index.html does not match an existing file
+2025-11-29 19:18:26.205 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" completed keep alive response.
+2025-11-29 19:18:26.207 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/swagger/index.html - 200 null text/html;charset=utf-8 48.7677ms
+2025-11-29 19:18:26.255 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/CRMUi/swagger/v1/swagger.json - null null
+2025-11-29 19:18:26.258 -05:00 [DBG] 1 candidate(s) found for the request path '/CRMUi/swagger/v1/swagger.json'
+2025-11-29 19:18:26.259 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'CRMUi/swagger/v1/swagger.json' for the request path '/CRMUi/swagger/v1/swagger.json'
+2025-11-29 19:18:26.262 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/CRMUi/swagger/v1/swagger.json'
+2025-11-29 19:18:26.264 -05:00 [DBG] Request did not match any endpoints
+2025-11-29 19:18:26.265 -05:00 [DBG] 1 candidate(s) found for the request path '/swagger/v1/swagger.json'
+2025-11-29 19:18:26.266 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' was rejected by constraint 'path':'Microsoft.AspNetCore.Routing.Constraints.NonFileNameRouteConstraint' with value 'swagger/v1/swagger.json' for the request path '/swagger/v1/swagger.json'
+2025-11-29 19:18:26.268 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is not valid for the request path '/swagger/v1/swagger.json'
+2025-11-29 19:18:26.269 -05:00 [DBG] Request did not match any endpoints
+2025-11-29 19:18:26.270 -05:00 [DBG] The request path /swagger/v1/swagger.json does not match an existing file
+2025-11-29 19:18:26.315 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" completed keep alive response.
+2025-11-29 19:18:26.315 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/CRMUi/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 60.2507ms
+2025-11-29 19:18:30.896 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:30.899 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0071ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:36.903 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5037/CRMUi/api/Customer/44 - null null
+2025-11-29 19:18:36.907 -05:00 [DBG] 1 candidate(s) found for the request path '/CRMUi/api/Customer/44'
+2025-11-29 19:18:36.908 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' with route pattern '{*path:nonfile}' is valid for the request path '/CRMUi/api/Customer/44'
+2025-11-29 19:18:36.909 -05:00 [DBG] Request matched endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:18:36.910 -05:00 [DBG] Matched endpoint 'Fallback {*path:nonfile}' is a fallback endpoint.
+2025-11-29 19:18:36.912 -05:00 [DBG] Endpoint 'Fallback {*path:nonfile}' already set, skipping route matching.
+2025-11-29 19:18:36.913 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:18:36.913 -05:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2025-11-29 19:18:36.914 -05:00 [INF] Executing endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:18:36.915 -05:00 [DBG] The request path /index.html does not match an existing file
+2025-11-29 19:18:36.916 -05:00 [INF] Executed endpoint 'Fallback {*path:nonfile}'
+2025-11-29 19:18:36.917 -05:00 [INF] HTTP GET /index.html responded 404 in 2.8345 ms
+2025-11-29 19:18:36.919 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" completed keep alive response.
+2025-11-29 19:18:36.920 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5037/CRMUi/api/Customer/44 - 404 0 null 17.283ms
+2025-11-29 19:18:36.923 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5037/CRMUi/api/Customer/44, Response status code: 404
+2025-11-29 19:18:40.899 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:40.907 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.008ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:18:50.923 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:18:50.933 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.008ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:00.951 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:00.967 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0035ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:10.981 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:10.993 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.008ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:21.003 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:21.015 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0082ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:31.035 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:31.043 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0061ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:41.048 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:41.061 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.4236ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:19:51.074 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:19:51.078 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0033ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:01.079 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:01.097 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0102ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:11.120 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:11.132 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0073ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:21.148 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:21.152 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0025ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:31.157 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:31.164 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0021ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:37.423 -05:00 [DBG] Connection id "0HNHFKL9JE4L4" disconnecting.
+2025-11-29 19:20:37.430 -05:00 [DBG] Connection id "0HNHFKL9JE4L4" stopped.
+2025-11-29 19:20:37.434 -05:00 [DBG] Connection id "0HNHFKL9JE4L4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:20:41.172 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:41.186 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0095ms - processed: 0 items - remaining: 1 items
+2025-11-29 19:20:48.506 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" disconnecting.
+2025-11-29 19:20:48.512 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" stopped.
+2025-11-29 19:20:48.517 -05:00 [DBG] Connection id "0HNHFKL9JE4L3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-11-29 19:20:51.201 -05:00 [DBG] Starting HttpMessageHandler cleanup cycle with 1 items
+2025-11-29 19:20:51.203 -05:00 [DBG] Ending HttpMessageHandler cleanup cycle after 0.0032ms - processed: 0 items - remaining: 1 items

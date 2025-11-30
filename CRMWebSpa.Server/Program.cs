@@ -83,7 +83,7 @@ app.UseStaticFiles();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/CRMUi/swagger/v1/swagger.json", "CRM Web SPA API V1");
+    c.SwaggerEndpoint("/CRMUi/swagger/swagger.json", "CRM Web SPA API V1");
     c.RoutePrefix = "swagger";
 });
 

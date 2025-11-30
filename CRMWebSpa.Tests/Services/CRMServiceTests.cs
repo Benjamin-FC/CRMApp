@@ -200,7 +200,7 @@ public class CRMServiceTests
         // Assert
         capturedRequest.Should().NotBeNull();
         capturedRequest!.RequestUri.Should().NotBeNull();
-        capturedRequest.RequestUri!.ToString().Should().Be("http://localhost/CRMbackend/api/v1/ClientData/12345");
+        capturedRequest.RequestUri!.ToString().Should().Be("http://localhost/CRMbackend/api/ClientData/12345");
     }
 
     [Fact]
