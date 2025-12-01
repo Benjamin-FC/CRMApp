@@ -2,8 +2,8 @@
 # Start CRMWebSpa Backend and Frontend for Local Testing
 # Usage: Run this script from the root of your solution folder
 
-$backendPath = "d:/_DELETE_/CRMUI/CRMWebSpa.Server/CRMWebSpa.Server.csproj"
-$frontendPath = "d:/_DELETE_/CRMUI/client"
+$backendPath = "C:\Users\BenjaminA\source\repos\CRMApp\CRMWebSpa.Server\CRMWebSpa.Server.csproj"
+$frontendPath = "C:\Users\BenjaminA\source\repos\CRMApp\client"
 $backendPort = 5037
 $frontendPort = 5173
 
@@ -12,12 +12,12 @@ function Close-PortProcess {
 	$connections = Get-NetTCPConnection -LocalPort $Port -ErrorAction SilentlyContinue | Where-Object { $_.State -eq 'Listen' -or $_.State -eq 'Established' }
 	if ($connections) {
 		$pids = $connections | Select-Object -ExpandProperty OwningProcess | Sort-Object -Unique
-		foreach ($pid in $pids) {
+		foreach ($processId in $pids) {
 			try {
-				$proc = Get-Process -Id $pid -ErrorAction SilentlyContinue
+				$proc = Get-Process -Id $processId -ErrorAction SilentlyContinue
 				if ($proc) {
-					Write-Host "Closing process $($proc.ProcessName) (PID $pid) on port $Port..." -ForegroundColor Yellow
-					Stop-Process -Id $pid -Force
+					Write-Host "Closing process $($proc.ProcessName) (PID $processId) on port $Port..." -ForegroundColor Yellow
+					Stop-Process -Id $processId -Force
 				}
 			} catch {}
 		}

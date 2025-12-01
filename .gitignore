@@ -31,6 +31,10 @@ appsettings.Development.json
 *.cache
 *.log
 
+# Log folders
+logs/
+log/
+
 # IDEs and Editors
 .vscode/
 .idea/
