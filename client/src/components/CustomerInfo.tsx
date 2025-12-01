@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { customerService, type CustomerInfo as CustomerInfoType } from '../services/api';
+import { FCInput, FCButton } from '@frankcrum/common-ui-shared-components';
 
 export default function CustomerInfo() {
     const navigate = useNavigate();
@@ -35,47 +36,47 @@ export default function CustomerInfo() {
     return (
         <div className="customer-page">
             <nav className="navbar">
-                <div className="navbar-brand">
-                    <span>🔷</span>
-                    CRM Portal
+                <div>
+                    <span>CRM Portal</span>
                 </div>
                 <div className="navbar-actions">
-                    <span className="user-info">Welcome, {username}</span>
-                    <button className="logout-button" onClick={handleLogout}>
-                        Logout
-                    </button>
+                    <span>Welcome, {username}</span>
+                    <FCButton
+                        variant="secondary"
+                        onClick={handleLogout}
+                        text="Logout"
+                    />
                 </div>
             </nav>
 
             <div className="customer-container">
-                <div className="page-header">
-                    <h1 className="page-title">Customer Information</h1>
-                    <p className="page-subtitle">Search and view customer details</p>
+                <div>
+                    <h1>Customer Information</h1>
+                    <p>Search and view customer details</p>
                 </div>
 
                 <div className="search-card">
                     <form className="search-form" onSubmit={handleSearch}>
-                        <div className="search-input-wrapper form-group">
-                            <label htmlFor="customerId" className="form-label">
+                        <div className="search-input-wrapper">
+                            <label htmlFor="customerId">
                                 Customer ID
                             </label>
-                            <input
+                            <FCInput
                                 id="customerId"
                                 type="text"
-                                className="form-input"
                                 placeholder="Enter customer ID"
                                 value={customerId}
-                                onChange={(e) => setCustomerId(e.target.value)}
-                                required
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomerId(e.target.value)}
+                                onValidate={() => {}}
+                                validationText=""
                             />
                         </div>
-                        <button
+                        <FCButton
                             type="submit"
-                            className="search-button"
+                            variant="primary"
                             disabled={loading}
-                        >
-                            {loading ? 'Searching...' : 'Search Customer'}
-                        </button>
+                            text={loading ? 'Searching...' : 'Search Customer'}
+                        />
                     </form>
 
                     {error && <div className="error-message" style={{ marginTop: '1rem' }}>{error}</div>}
