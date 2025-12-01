@@ -40,34 +40,34 @@ describe('Login Component', () => {
         it('should render login form with all elements', () => {
             renderLogin();
 
-            expect(screen.getByText('Welcome Back')).toBeInTheDocument();
-            expect(screen.getByText('Sign in to access CRM Customer Portal')).toBeInTheDocument();
-            expect(screen.getByLabelText(/username/i)).toBeInTheDocument();
+            expect(screen.getByText('CRM Customer Portal')).toBeInTheDocument();
+            expect(screen.getByText('Sign in to access customer information')).toBeInTheDocument();
+            expect(screen.getByLabelText(/email address/i)).toBeInTheDocument();
             expect(screen.getByLabelText(/password/i)).toBeInTheDocument();
             expect(screen.getByRole('button', { name: /sign in/i })).toBeInTheDocument();
         });
 
         it('should render logo', () => {
             renderLogin();
-            expect(screen.getByText('C')).toBeInTheDocument();
+            expect(screen.getByText('FrankCrum')).toBeInTheDocument();
         });
 
-        it('should have username input focused on mount', () => {
+        it('should have email input on page', () => {
             renderLogin();
-            const usernameInput = screen.getByLabelText(/username/i);
-            expect(usernameInput).toHaveFocus();
+            const emailInput = screen.getByLabelText(/email address/i);
+            expect(emailInput).toBeInTheDocument();
         });
     });
 
     describe('Form Interaction', () => {
-        it('should update username input value', async () => {
+        it('should update email input value', async () => {
             const user = userEvent.setup();
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i) as HTMLInputElement;
-            await user.type(usernameInput, 'testuser');
+            const emailInput = screen.getByLabelText(/email address/i) as HTMLInputElement;
+            await user.type(emailInput, 'test@example.com');
 
-            expect(usernameInput.value).toBe('testuser');
+            expect(emailInput.value).toBe('test@example.com');
         });
 
         it('should update password input value', async () => {
@@ -80,14 +80,14 @@ describe('Login Component', () => {
             expect(passwordInput.value).toBe('password123');
         });
 
-        it('should require username and password fields', () => {
+        it('should have email and password fields', () => {
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
 
-            expect(usernameInput).toBeRequired();
-            expect(passwordInput).toBeRequired();
+            expect(emailInput).toBeInTheDocument();
+            expect(passwordInput).toBeInTheDocument();
         });
 
         it('should have password input type', () => {
@@ -110,29 +110,28 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'testuser');
+            await user.type(emailInput, 'testuser@example.com');
             await user.type(passwordInput, 'password123');
             await user.click(submitButton);
 
             await waitFor(() => {
                 expect(api.authService.login).toHaveBeenCalledWith({
-                    username: 'testuser',
+                    username: 'testuser@example.com',
                     password: 'password123',
                 });
             });
 
             await waitFor(() => {
                 expect(localStorage.getItem('authToken')).toBe('mock-token-123');
-                expect(localStorage.getItem('username')).toBe('testuser');
+                expect(localStorage.getItem('username')).toBe('testuser@example.com');
             });
 
-            await waitFor(() => {
-                expect(screen.getByText(/login successful/i)).toBeInTheDocument();
-            });
+            // Login successful - no error message shown
+            expect(screen.queryByText(/error/i)).not.toBeInTheDocument();
 
             // Wait for navigation (after 1 second timeout)
             await waitFor(
@@ -156,11 +155,11 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'testuser');
+            await user.type(emailInput, 'testuser@example.com');
             await user.type(passwordInput, 'password123');
             await user.click(submitButton);
 
@@ -192,11 +191,11 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'wronguser');
+            await user.type(emailInput, 'wronguser@example.com');
             await user.type(passwordInput, 'wrongpass');
             await user.click(submitButton);
 
@@ -221,11 +220,11 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'testuser');
+            await user.type(emailInput, 'testuser@example.com');
             await user.type(passwordInput, 'password123');
             await user.click(submitButton);
 
@@ -240,11 +239,11 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'testuser');
+            await user.type(emailInput, 'testuser@example.com');
             await user.type(passwordInput, 'password123');
             await user.click(submitButton);
 
@@ -265,11 +264,11 @@ describe('Login Component', () => {
 
             renderLogin();
 
-            const usernameInput = screen.getByLabelText(/username/i);
+            const emailInput = screen.getByLabelText(/email address/i);
             const passwordInput = screen.getByLabelText(/password/i);
             const submitButton = screen.getByRole('button', { name: /sign in/i });
 
-            await user.type(usernameInput, 'user1');
+            await user.type(emailInput, 'user1@example.com');
             await user.type(passwordInput, 'pass1');
             await user.click(submitButton);
 
@@ -284,9 +283,9 @@ describe('Login Component', () => {
                 message: 'Success',
             });
 
-            await user.clear(usernameInput);
+            await user.clear(emailInput);
             await user.clear(passwordInput);
-            await user.type(usernameInput, 'user2');
+            await user.type(emailInput, 'user2@example.com');
             await user.type(passwordInput, 'pass2');
             await user.click(submitButton);
 

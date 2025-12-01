@@ -1,0 +1,1018 @@
+npm warn Unknown project config "always-auth". This will stop working in the next major version of npm.
+
+> client@0.0.0 test
+> vitest --run --reporter=verbose
+
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90mC:/Users/BenjaminA/source/repos/CRMApp/client[39m
+
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mRouting[2m > [22mshould render Login component on root path[32m 50[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mRouting[2m > [22mshould redirect to login when accessing /customer without token[32m 16[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mRouting[2m > [22mshould render CustomerInfo component when accessing /customer with token[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mRouting[2m > [22mshould redirect unknown routes to login[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mProtected Route[2m > [22mshould protect /customer route when no token exists[32m 11[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mProtected Route[2m > [22mshould allow access to /customer route when token exists[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m src/test/App.test.tsx[2m > [22mApp Component[2m > [22mProtected Route[2m > [22mshould render app container[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mRendering[2m > [22mshould render login form with all elements[32m 134[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mRendering[2m > [22mshould render logo[32m 8[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mRendering[2m > [22mshould have email input on page[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mRendering[2m > [22mshould render navbar with brand and user info[32m 137[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mRendering[2m > [22mshould render page header[32m 15[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mRendering[2m > [22mshould render search form[32m 24[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mRendering[2m > [22mshould display default username when not in localStorage[32m 6[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould update customer ID input value[32m 137[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Interaction[2m > [22mshould update email input value[33m 311[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould successfully search and display customer information[32m 233[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Interaction[2m > [22mshould update password input value[32m 216[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Interaction[2m > [22mshould have email and password fields[32m 7[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Interaction[2m > [22mshould have password input type[32m 4[2mms[22m[39m
+stderr | src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display loading state during search
+An update to CustomerInfo inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to CustomerInfo inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+An update to CustomerInfo inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould display loading state during search[32m 233[2mms[22m[39m
+stderr | src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display error message when customer not found
+Error fetching customer: { response: { data: { message: 'Customer not found' } } }
+
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould display error message when customer not found[32m 184[2mms[22m[39m
+stderr | src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display generic error message on network error
+Error fetching customer: Error: Network error
+    at C:/Users/BenjaminA/source/repos/CRMApp/client/src/test/CustomerInfo.test.tsx:187:74
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:145:11
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:919:26
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1244:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1210:10)
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1654:37
+    at Traces.$ (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/vitest/dist/chunks/traces.U4xDYhzZ.js:115:27)
+    at trace (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/vitest/dist/chunks/test.DqQZzsWf.js:234:21)
+    at runTest (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1654:12)
+
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould display generic error message on network error[32m 203[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Success[2m > [22mshould successfully login and redirect[33m 672[2mms[22m[39m
+stderr | src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should clear previous customer data on error
+Error fetching customer: Error: Not found
+    at C:/Users/BenjaminA/source/repos/CRMApp/client/src/test/CustomerInfo.test.tsx:233:74
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:919:20
+
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould clear previous customer data on error[33m 439[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mSearch Functionality[2m > [22mshould not require customer ID field[32m 10[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mCustomer Details Display[2m > [22mshould display all customer fields correctly[32m 208[2mms[22m[39m
+stderr | src/test/Login.test.tsx > Login Component > Form Submission - Success > should show loading state during login
+An update to Login inside a test was not wrapped in act(...).
+
+When testing, code that causes React state updates should be wrapped into act(...):
+
+act(() => {
+  /* fire events that update state */
+});
+/* assert on the output */
+
+This ensures that you're testing the behavior the user would see in the browser. Learn more at https://react.dev/link/wrap-tests-with-act
+
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mCustomer Details Display[2m > [22mshould display customer avatar with first letter of legal name[32m 170[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Success[2m > [22mshould show loading state during login[33m 657[2mms[22m[39m
+ [32mΓ£ô[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mLogout Functionality[2m > [22mshould clear localStorage and navigate to login on logout[32m 63[2mms[22m[39m
+stderr | src/test/CustomerInfo.test.tsx > CustomerInfo Component > Error Handling > should clear error message on new search
+Error fetching customer: Error: Error 1
+    at C:/Users/BenjaminA/source/repos/CRMApp/client/src/test/CustomerInfo.test.tsx:348:74
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:145:11
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:919:26
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1244:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1210:10)
+    at file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1654:37
+    at Traces.$ (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/vitest/dist/chunks/traces.U4xDYhzZ.js:115:27)
+    at trace (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/vitest/dist/chunks/test.DqQZzsWf.js:234:21)
+    at runTest (file:///C:/Users/BenjaminA/source/repos/CRMApp/client/node_modules/@vitest/runner/dist/index.js:1654:12)
+
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Failure[2m > [22mshould display error message on login failure[33m 651[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Failure[2m > [22mshould display error message on network error[33m 654[2mms[22m[39m
+ [31m├ù[39m src/test/CustomerInfo.test.tsx[2m > [22mCustomerInfo Component[2m > [22mError Handling[2m > [22mshould clear error message on new search[33m 1416[2mms[22m[39m
+[31m   ΓåÆ Unable to find an element with the text: /customer not found/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mstyle[31m=[32m"min-height: 100vh; background-color: rgb(245, 245, 245);"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mstyle[31m=[32m"background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1rem;"[31m
+        [36m>[31m
+          [36m<h1[31m
+            [33mstyle[31m=[32m"color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"[31m
+          [36m>[31m
+            [0mFrankCrum[0m
+          [36m</h1>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"[31m
+          [36m>[31m
+            [0mCRM Portal[0m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1.5rem;"[31m
+        [36m>[31m
+          [36m<span[31m
+            [33mstyle[31m=[32m"font-size: 0.95rem;"[31m
+          [36m>[31m
+            [0mWelcome, [0m
+            [36m<strong>[31m
+              [0mTestUser[0m
+            [36m</strong>[31m
+          [36m</span>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"button-secondary undefined"[31m
+          [36m>[31m
+            [0mLogout[0m
+          [36m</button>[31m
+        [36m</div>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mstyle[31m=[32m"max-width: 1200px; margin: 0px auto; padding: 2rem;"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"margin-bottom: 2rem;"[31m
+        [36m>[31m
+          [36m<h1[31m
+            [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"[31m
+          [36m>[31m
+            [0mCustomer Information[0m
+          [36m</h1>[31m
+          [36m<p[31m
+            [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"[31m
+          [36m>[31m
+            [0mSearch and view customer details[0m
+          [36m</p>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+        [36m>[31m
+          [36m<h2[31m
+            [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"[31m
+          [36m>[31m
+            [0mSearch Customer[0m
+          [36m</h2>[31m
+          [36m<form[31m
+            [33mstyle[31m=[32m"display: flex; gap: 1rem; align-items: flex-end;"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"flex: 1 1 0%; max-width: 400px;"[31m
+            [36m>[31m
+              [36m<label[31m
+                [33mfor[31m=[32m"customerId"[31m
+                [33mstyle[31m=[32m"display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mCustomer ID[0m
+              [36m</label>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"input-container"[31m
+              [36m>[31m
+                [36m<input[31m
+                  [33mclass[31m=[32m"form-control"[31m
+                  [33mid[31m=[32m"customerId"[31m
+                  [33mtype[31m=[32m"text"[31m
+                  [33mvalue[31m=[32m"22222"[31m
+                [36m/>[31m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-primary undefined"[31m
+              [33mtype[31m=[32m"submit"[31m
+            [36m>[31m
+              [0mSearch[0m
+            [36m</button>[31m
+          [36m</form>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mstyle[31m=[32m"background-color: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid rgb(240, 240, 240); margin-bottom: 2rem;"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"width: 80px; height: 80px; border-radius: 50%; background-color: rgb(15, 153, 214); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;"[31m
+            [36m>[31m
+              [0mT[0m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"flex: 1 1 0%;"[31m
+            [36m>[31m
+              [36m<h2[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1.75rem; font-weight: 600; margin-bottom: 0.25rem;"[31m
+              [36m>[31m
+                [0mTest LLC[0m
+              [36m</h2>[31m
+              [36m<p[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"[31m
+              [36m>[31m
+                [0mCustomer ID: [0m
+                [36m<strong>[31m
+                  [0m22222[0m
+                [36m</strong>[31m
+              [36m</p>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"background-color: rgb(212, 237, 218); color: rgb(21, 87, 36); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;"[31m
+            [36m>[31m
+              [0mActive[0m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"[31m
+          [36m>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mDBA[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mTest[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mEdit Approval[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mY[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mCompliance Hold[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mN[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mLevel[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mGold[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mPayment Term ID[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mNET30[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+              [36m>[31m
+                [0mPayment Method[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+              [36m>[31m
+                [0mACH[0m
+              [36m</div>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mstyle[31m=[32m"min-height: 100vh; background-color: rgb(245, 245, 245);"[31m
+      [36m>[31m
+        [36m<header[31m
+          [33mstyle[31m=[32m"background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1rem;"[31m
+          [36m>[31m
+            [36m<h1[31m
+              [33mstyle[31m=[32m"color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"[31m
+            [36m>[31m
+              [0mFrankCrum[0m
+            [36m</h1>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"[31m
+            [36m>[31m
+              [0mCRM Portal[0m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1.5rem;"[31m
+          [36m>[31m
+            [36m<span[31m
+              [33mstyle[31m=[32m"font-size: 0.95rem;"[31m
+            [36m>[31m
+              [0mWelcome, [0m
+              [36m<strong>[31m
+                [0mTestUser[0m
+              [36m</strong>[31m
+            [36m</span>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"button-secondary undefined"[31m
+            [36m>[31m
+              [0mLogout[0m
+            [36m</button>[31m
+          [36m</div>[31m
+        [36m</header>[31m
+        [36m<main[31m
+          [33mstyle[31m=[32m"max-width: 1200px; margin: 0px auto; padding: 2rem;"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"margin-bottom: 2rem;"[31m
+          [36m>[31m
+            [36m<h1[31m
+              [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"[31m
+            [36m>[31m
+              [0mCustomer Information[0m
+            [36m</h1>[31m
+            [36m<p[31m
+              [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"[31m
+            [36m>[31m
+              [0mSearch and view customer details[0m
+            [36m</p>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+          [36m>[31m
+            [36m<h2[31m
+              [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"[31m
+            [36m>[31m
+              [0mSearch Customer[0m
+            [36m</h2>[31m
+            [36m<form[31m
+              [33mstyle[31m=[32m"display: flex; gap: 1rem; align-items: flex-end;"[31m
+            [36m>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"flex: 1 1 0%; max-width: 400px;"[31m
+              [36m>[31m
+                [36m<label[31m
+                  [33mfor[31m=[32m"customerId"[31m
+                  [33mstyle[31m=[32m"display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mCustomer ID[0m
+                [36m</label>[31m
+                [36m<div[31m
+                  [33mclass[31m=[32m"input-container"[31m
+                [36m>[31m
+                  [36m<input[31m
+                    [33mclass[31m=[32m"form-control"[31m
+                    [33mid[31m=[32m"customerId"[31m
+                    [33mtype[31m=[32m"text"[31m
+                    [33mvalue[31m=[32m"22222"[31m
+                  [36m/>[31m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<button[31m
+                [33mclass[31m=[32m"button-primary undefined"[31m
+                [33mtype[31m=[32m"submit"[31m
+              [36m>[31m
+                [0mSearch[0m
+              [36m</button>[31m
+            [36m</form>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mstyle[31m=[32m"background-color: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"display: flex; align-items: center; gap: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid rgb(240, 240, 240); margin-bottom: 2rem;"[31m
+            [36m>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"width: 80px; height: 80px; border-radius: 50%; background-color: rgb(15, 153, 214); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;"[31m
+              [36m>[31m
+                [0mT[0m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"flex: 1 1 0%;"[31m
+              [36m>[31m
+                [36m<h2[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1.75rem; font-weight: 600; margin-bottom: 0.25rem;"[31m
+                [36m>[31m
+                  [0mTest LLC[0m
+                [36m</h2>[31m
+                [36m<p[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"[31m
+                [36m>[31m
+                  [0mCustomer ID: [0m
+                  [36m<strong>[31m
+                    [0m22222[0m
+                  [36m</strong>[31m
+                [36m</p>[31m
+              [36m</div>[31m
+              [36m<div[31m
+                [33mstyle[31m=[32m"background-color: rgb(212, 237, 218); color: rgb(21, 87, 36); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;"[31m
+              [36m>[31m
+                [0mActive[0m
+              [36m</div>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mstyle[31m=[32m"display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"[31m
+            [36m>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mDBA[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mTest[0m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mEdit Approval[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mY[0m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mCompliance Hold[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mN[0m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mLevel[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mGold[0m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mPayment Term ID[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mNET30[0m
+                [36m</div>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"[31m
+                [36m>[31m
+                  [0mPayment Method[0m
+                [36m</div>[31m
+                [36m<div[31m
+                  [33mstyle[31m=[32m"color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"[31m
+                [36m>[31m
+                  [0mACH[0m
+                [36m</div>[31m
+              [36m</div>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</main>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Failure[2m > [22mshould display generic error message when no specific error is provided[33m 639[2mms[22m[39m
+ [32mΓ£ô[39m src/test/Login.test.tsx[2m > [22mLogin Component[2m > [22mForm Submission - Failure[2m > [22mshould clear previous error messages on new submission[33m 1061[2mms[22m[39m
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Failed Suites 1 ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+
+ FAIL  src/test/api.test.ts [ src/test/api.test.ts ]
+TypeError: Cannot read properties of undefined (reading 'interceptors')
+ Γ¥» src/services/api.ts:13:5
+     11| 
+     12| // Add token to requests if available
+     13| api.interceptors.request.use((config) => {
+       |     ^
+     14|     const token = localStorage.getItem('authToken');
+     15|     if (token) {
+ Γ¥» src/test/api.test.ts:3:1
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/2]ΓÄ»
+
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Failed Tests 1 ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Error Handling > should clear error message on new search
+TestingLibraryElementError: Unable to find an element with the text: /customer not found/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value="22222"
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid rgb(240, 240, 240); margin-bottom: 2rem;"
+          >
+            <div
+              style="width: 80px; height: 80px; border-radius: 50%; background-color: rgb(15, 153, 214); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;"
+            >
+              T
+            </div>
+            <div
+              style="flex: 1 1 0%;"
+            >
+              <h2
+                style="color: rgb(11, 12, 13); font-size: 1.75rem; font-weight: 600; margin-bottom: 0.25rem;"
+              >
+                Test LLC
+              </h2>
+              <p
+                style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+              >
+                Customer ID: 
+                <strong>
+                  22222
+                </strong>
+              </p>
+            </div>
+            <div
+              style="background-color: rgb(212, 237, 218); color: rgb(21, 87, 36); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;"
+            >
+              Active
+            </div>
+          </div>
+          <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"
+          >
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                DBA
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                Test
+              </div>
+            </div>
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                Edit Approval
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                Y
+              </div>
+            </div>
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                Compliance Hold
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                N
+              </div>
+            </div>
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                Level
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                Gold
+              </div>
+            </div>
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                Payment Term ID
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                NET30
+              </div>
+            </div>
+            <div>
+              <div
+                style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+              >
+                Payment Method
+              </div>
+              <div
+                style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+              >
+                ACH
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+
+Ignored nodes: comments, script, style
+<html>
+  <head />
+  <body>
+    <div>
+      <div
+        style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+      >
+        <header
+          style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <div
+            style="display: flex; align-items: center; gap: 1rem;"
+          >
+            <h1
+              style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+            >
+              FrankCrum
+            </h1>
+            <div
+              style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+            >
+              CRM Portal
+            </div>
+          </div>
+          <div
+            style="display: flex; align-items: center; gap: 1.5rem;"
+          >
+            <span
+              style="font-size: 0.95rem;"
+            >
+              Welcome, 
+              <strong>
+                TestUser
+              </strong>
+            </span>
+            <button
+              class="button-secondary undefined"
+            >
+              Logout
+            </button>
+          </div>
+        </header>
+        <main
+          style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+        >
+          <div
+            style="margin-bottom: 2rem;"
+          >
+            <h1
+              style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+            >
+              Customer Information
+            </h1>
+            <p
+              style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+            >
+              Search and view customer details
+            </p>
+          </div>
+          <div
+            style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+          >
+            <h2
+              style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+            >
+              Search Customer
+            </h2>
+            <form
+              style="display: flex; gap: 1rem; align-items: flex-end;"
+            >
+              <div
+                style="flex: 1 1 0%; max-width: 400px;"
+              >
+                <label
+                  for="customerId"
+                  style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+                >
+                  Customer ID
+                </label>
+                <div
+                  class="input-container"
+                >
+                  <input
+                    class="form-control"
+                    id="customerId"
+                    type="text"
+                    value="22222"
+                  />
+                </div>
+              </div>
+              <button
+                class="button-primary undefined"
+                type="submit"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+          <div
+            style="background-color: white; border-radius: 8px; padding: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+          >
+            <div
+              style="display: flex; align-items: center; gap: 1.5rem; padding-bottom: 1.5rem; border-bottom: 2px solid rgb(240, 240, 240); margin-bottom: 2rem;"
+            >
+              <div
+                style="width: 80px; height: 80px; border-radius: 50%; background-color: rgb(15, 153, 214); color: white; display: flex; align-items: center; justify-content: center; font-size: 2rem; font-weight: 700;"
+              >
+                T
+              </div>
+              <div
+                style="flex: 1 1 0%;"
+              >
+                <h2
+                  style="color: rgb(11, 12, 13); font-size: 1.75rem; font-weight: 600; margin-bottom: 0.25rem;"
+                >
+                  Test LLC
+                </h2>
+                <p
+                  style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+                >
+                  Customer ID: 
+                  <strong>
+                    22222
+                  </strong>
+                </p>
+              </div>
+              <div
+                style="background-color: rgb(212, 237, 218); color: rgb(21, 87, 36); padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.9rem; font-weight: 600;"
+              >
+                Active
+              </div>
+            </div>
+            <div
+              style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"
+            >
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  DBA
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  Test
+                </div>
+              </div>
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  Edit Approval
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  Y
+                </div>
+              </div>
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  Compliance Hold
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  N
+                </div>
+              </div>
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  Level
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  Gold
+                </div>
+              </div>
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  Payment Term ID
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  NET30
+                </div>
+              </div>
+              <div>
+                <div
+                  style="color: rgb(122, 134, 140); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px;"
+                >
+                  Payment Method
+                </div>
+                <div
+                  style="color: rgb(11, 12, 13); font-size: 1rem; font-weight: 500;"
+                >
+                  ACH
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
+ Γ¥» Proxy.waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:163:27
+ Γ¥» src/test/CustomerInfo.test.tsx:381:19
+    379|             await user.click(searchButton);
+    380| 
+    381|             await waitFor(() => {
+       |                   ^
+    382|                 expect(screen.getByText(/customer not found/i)).toBeInΓÇª
+    383|             });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/2]ΓÄ»
+
+
+[2m Test Files [22m [1m[31m2 failed[39m[22m[2m | [22m[1m[32m2 passed[39m[22m[90m (4)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m34 passed[39m[22m[90m (35)[39m
+[2m   Start at [22m 14:09:28
+[2m   Duration [22m 6.29s[2m (transform 322ms, setup 808ms, import 732ms, tests 8.63s, environment 2.49s)[22m
+

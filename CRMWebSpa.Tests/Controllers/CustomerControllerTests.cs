@@ -42,7 +42,7 @@ public class CustomerControllerTests
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
         _mockCrmService.Setup(s => s.GetCustomerInfoAsync(customerId, token))
-            .ReturnsAsync(expectedCustomer);
+            .ReturnsAsync((expectedCustomer, null));
 
         // Act
         var result = await _controller.GetCustomer(customerId);
@@ -126,7 +126,7 @@ public class CustomerControllerTests
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
         
         _mockCrmService.Setup(s => s.GetCustomerInfoAsync(customerId, token))
-            .ReturnsAsync((CustomerInfo?)null);
+            .ReturnsAsync((null, null));
 
         // Act
         var result = await _controller.GetCustomer(customerId);
@@ -150,7 +150,7 @@ public class CustomerControllerTests
 
         _controller.ControllerContext.HttpContext.Request.Headers["Authorization"] = $"Bearer {token}";
         _mockCrmService.Setup(s => s.GetCustomerInfoAsync(customerId, token))
-            .ReturnsAsync(expectedCustomer);
+            .ReturnsAsync((expectedCustomer, null));
 
         // Act
         await _controller.GetCustomer(customerId);
@@ -172,7 +172,7 @@ public class CustomerControllerTests
         string? capturedToken = null;
         _mockCrmService.Setup(s => s.GetCustomerInfoAsync(It.IsAny<string>(), It.IsAny<string>()))
             .Callback<string, string>((id, token) => capturedToken = token)
-            .ReturnsAsync(expectedCustomer);
+            .ReturnsAsync((expectedCustomer, null));
 
         // Act
         await _controller.GetCustomer(customerId);

@@ -61,14 +61,15 @@ public class CRMServiceTests
             .ReturnsAsync(httpResponse);
 
         // Act
-        var result = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customer, error) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         // Assert
-        result.Should().NotBeNull();
-        result!.ClientId.Should().Be(customerId);
-        result.Dba.Should().Be("Test Company");
-        result.ClientLegalName.Should().Be("Test Company LLC");
-        result.Status.Should().Be("Active");
+        customer.Should().NotBeNull();
+        customer!.ClientId.Should().Be(customerId);
+        customer.Dba.Should().Be("Test Company");
+        customer.ClientLegalName.Should().Be("Test Company LLC");
+        customer.Status.Should().Be("Active");
+        error.Should().BeNull();
     }
 
     [Fact]
@@ -91,10 +92,11 @@ public class CRMServiceTests
             .ReturnsAsync(httpResponse);
 
         // Act
-        var result = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customer, error) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         // Assert
-        result.Should().BeNull();
+        customer.Should().BeNull();
+        error.Should().NotBeNull();
     }
 
     [Fact]
@@ -117,10 +119,11 @@ public class CRMServiceTests
             .ReturnsAsync(httpResponse);
 
         // Act
-        var result = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customer, error) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         // Assert
-        result.Should().BeNull();
+        customer.Should().BeNull();
+        error.Should().NotBeNull();
     }
 
     [Fact]
@@ -138,10 +141,11 @@ public class CRMServiceTests
             .ThrowsAsync(new HttpRequestException("Network error"));
 
         // Act
-        var result = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customer, error) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         // Assert
-        result.Should().BeNull();
+        customer.Should().BeNull();
+        error.Should().NotBeNull();
     }
 
     [Fact]
@@ -286,7 +290,7 @@ public class CRMServiceTests
             x => x.Log(
                 LogLevel.Error,
                 It.IsAny<EventId>(),
-                It.Is<It.IsAnyType>((v, t) => v.ToString()!.Contains("Error fetching customer info")),
+                It.Is<It.IsAnyType>((v, t) => v.ToString()!.Contains("HTTP error")),
                 It.IsAny<Exception>(),
                 It.IsAny<Func<It.IsAnyType, Exception?, string>>()),
             Times.Once);
@@ -313,10 +317,10 @@ public class CRMServiceTests
             });
 
         // Act
-        var result = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customer, error) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         // Assert
-        result.Should().NotBeNull();
-        result!.ClientId.Should().Be(customerId);
+        customer.Should().NotBeNull();
+        customer!.ClientId.Should().Be(customerId);
     }
 }

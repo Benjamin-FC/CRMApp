@@ -1,0 +1,4223 @@
+npm warn Unknown project config "always-auth". This will stop working in the next major version of npm.
+
+> client@0.0.0 test
+> vitest --run
+
+
+[1m[46m RUN [49m[22m [36mv4.0.14 [39m[90mC:/Users/BenjaminA/source/repos/CRMApp/client[39m
+
+ [31mΓ¥»[39m src/test/App.test.tsx [2m([22m[2m7 tests[22m[2m | [22m[31m4 failed[39m[2m)[22m[32m 109[2mms[22m[39m
+[31m       [31m├ù[31m should render Login component on root path[39m[32m 50[2mms[22m[39m
+[31m       [31m├ù[31m should redirect to login when accessing /customer without token[39m[32m 12[2mms[22m[39m
+       [32mΓ£ô[39m should render CustomerInfo component when accessing /customer with token[32m 15[2mms[22m[39m
+[31m       [31m├ù[31m should redirect unknown routes to login[39m[32m 9[2mms[22m[39m
+[31m       [31m├ù[31m should protect /customer route when no token exists[39m[32m 8[2mms[22m[39m
+       [32mΓ£ô[39m should allow access to /customer route when token exists[32m 7[2mms[22m[39m
+       [32mΓ£ô[39m should render app container[32m 6[2mms[22m[39m
+ [31mΓ¥»[39m src/test/Login.test.tsx [2m([22m[2m13 tests[22m[2m | [22m[31m11 failed[39m[2m)[22m[33m 373[2mms[22m[39m
+[31m       [31m├ù[31m should render login form with all elements[39m[32m 47[2mms[22m[39m
+[31m       [31m├ù[31m should render logo[39m[32m 8[2mms[22m[39m
+[31m       [31m├ù[31m should have username input focused on mount[39m[32m 11[2mms[22m[39m
+[31m       [31m├ù[31m should update username input value[39m[32m 8[2mms[22m[39m
+       [32mΓ£ô[39m should update password input value[32m 248[2mms[22m[39m
+[31m       [31m├ù[31m should require username and password fields[39m[32m 6[2mms[22m[39m
+       [32mΓ£ô[39m should have password input type[32m 5[2mms[22m[39m
+[31m       [31m├ù[31m should successfully login and redirect[39m[32m 8[2mms[22m[39m
+[31m       [31m├ù[31m should show loading state during login[39m[32m 6[2mms[22m[39m
+[31m       [31m├ù[31m should display error message on login failure[39m[32m 6[2mms[22m[39m
+[31m       [31m├ù[31m should display error message on network error[39m[32m 9[2mms[22m[39m
+[31m       [31m├ù[31m should display generic error message when no specific error is provided[39m[32m 5[2mms[22m[39m
+[31m       [31m├ù[31m should clear previous error messages on new submission[39m[32m 5[2mms[22m[39m
+ [31mΓ¥»[39m src/test/CustomerInfo.test.tsx [2m([22m[2m15 tests[22m[2m | [22m[31m12 failed[39m[2m)[22m[33m 1112[2mms[22m[39m
+[31m       [31m├ù[31m should render navbar with brand and user info[39m[32m 55[2mms[22m[39m
+       [32mΓ£ô[39m should render page header[32m 9[2mms[22m[39m
+[31m       [31m├ù[31m should render search form[39m[32m 165[2mms[22m[39m
+[31m       [31m├ù[31m should display default username when not in localStorage[39m[32m 5[2mms[22m[39m
+       [32mΓ£ô[39m should update customer ID input value[32m 118[2mms[22m[39m
+[31m       [31m├ù[31m should successfully search and display customer information[39m[32m 110[2mms[22m[39m
+[31m       [31m├ù[31m should display loading state during search[39m[32m 96[2mms[22m[39m
+[31m       [31m├ù[31m should display error message when customer not found[39m[32m 88[2mms[22m[39m
+[31m       [31m├ù[31m should display generic error message on network error[39m[32m 85[2mms[22m[39m
+[31m       [31m├ù[31m should clear previous customer data on error[39m[32m 87[2mms[22m[39m
+[31m       [31m├ù[31m should require customer ID field[39m[32m 5[2mms[22m[39m
+[31m       [31m├ù[31m should display all customer fields correctly[39m[32m 82[2mms[22m[39m
+[31m       [31m├ù[31m should display customer avatar with first letter of legal name[39m[32m 82[2mms[22m[39m
+       [32mΓ£ô[39m should clear localStorage and navigate to login on logout[32m 17[2mms[22m[39m
+[31m       [31m├ù[31m should clear error message on new search[39m[32m 105[2mms[22m[39m
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ» Failed Tests 27 ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»
+
+ FAIL  src/test/App.test.tsx > App Component > Routing > should render Login component on root path
+TestingLibraryElementError: Unable to find an element with the text: Welcome Back. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="app-container"
+    >
+      <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+      >
+        <div
+          style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+        >
+          <div
+            style="text-align: center; margin-bottom: 2rem;"
+          >
+            <h1
+              style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+            >
+              FrankCrum
+            </h1>
+          </div>
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+          >
+            CRM Customer Portal
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+          >
+            Sign in to access customer information
+          </p>
+          <form>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="email"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <rect
+                    height="16"
+                    rx="2"
+                    width="20"
+                    x="2"
+                    y="4"
+                  />
+                  <path
+                    d="M22 7l-10 7L2 7"
+                  />
+                </svg>
+                Email Address
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="password"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  height="14.816"
+                  viewBox="0 0 12.964 14.816"
+                  width="12.964"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                    style="fill: #414141;"
+                  />
+                </svg>
+                Password
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="width: 100%;"
+            >
+              <button
+                class="button-primary undefined"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+          <div
+            style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+          >
+            <p
+              style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+            >
+              ┬⌐ 2025 Frank Crum. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/App.test.tsx:45:27
+     43|             );
+     44| 
+     45|             expect(screen.getByText('Welcome Back')).toBeInTheDocumentΓÇª
+       |                           ^
+     46|         });
+     47| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[1/27]ΓÄ»
+
+ FAIL  src/test/App.test.tsx > App Component > Routing > should redirect to login when accessing /customer without token
+TestingLibraryElementError: Unable to find an element with the text: Welcome Back. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="app-container"
+    >
+      <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+      >
+        <div
+          style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+        >
+          <div
+            style="text-align: center; margin-bottom: 2rem;"
+          >
+            <h1
+              style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+            >
+              FrankCrum
+            </h1>
+          </div>
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+          >
+            CRM Customer Portal
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+          >
+            Sign in to access customer information
+          </p>
+          <form>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="email"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <rect
+                    height="16"
+                    rx="2"
+                    width="20"
+                    x="2"
+                    y="4"
+                  />
+                  <path
+                    d="M22 7l-10 7L2 7"
+                  />
+                </svg>
+                Email Address
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="password"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  height="14.816"
+                  viewBox="0 0 12.964 14.816"
+                  width="12.964"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                    style="fill: #414141;"
+                  />
+                </svg>
+                Password
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="width: 100%;"
+            >
+              <button
+                class="button-primary undefined"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+          <div
+            style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+          >
+            <p
+              style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+            >
+              ┬⌐ 2025 Frank Crum. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/App.test.tsx:55:27
+     53|             );
+     54| 
+     55|             expect(screen.getByText('Welcome Back')).toBeInTheDocumentΓÇª
+       |                           ^
+     56|         });
+     57| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[2/27]ΓÄ»
+
+ FAIL  src/test/App.test.tsx > App Component > Routing > should redirect unknown routes to login
+TestingLibraryElementError: Unable to find an element with the text: Welcome Back. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="app-container"
+    >
+      <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+      >
+        <div
+          style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+        >
+          <div
+            style="text-align: center; margin-bottom: 2rem;"
+          >
+            <h1
+              style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+            >
+              FrankCrum
+            </h1>
+          </div>
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+          >
+            CRM Customer Portal
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+          >
+            Sign in to access customer information
+          </p>
+          <form>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="email"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <rect
+                    height="16"
+                    rx="2"
+                    width="20"
+                    x="2"
+                    y="4"
+                  />
+                  <path
+                    d="M22 7l-10 7L2 7"
+                  />
+                </svg>
+                Email Address
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="password"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  height="14.816"
+                  viewBox="0 0 12.964 14.816"
+                  width="12.964"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                    style="fill: #414141;"
+                  />
+                </svg>
+                Password
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="width: 100%;"
+            >
+              <button
+                class="button-primary undefined"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+          <div
+            style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+          >
+            <p
+              style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+            >
+              ┬⌐ 2025 Frank Crum. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/App.test.tsx:77:27
+     75|             );
+     76| 
+     77|             expect(screen.getByText('Welcome Back')).toBeInTheDocumentΓÇª
+       |                           ^
+     78|         });
+     79|     });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[3/27]ΓÄ»
+
+ FAIL  src/test/App.test.tsx > App Component > Protected Route > should protect /customer route when no token exists
+TestingLibraryElementError: Unable to find an element with the text: Welcome Back. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      class="app-container"
+    >
+      <div
+        style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+      >
+        <div
+          style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+        >
+          <div
+            style="text-align: center; margin-bottom: 2rem;"
+          >
+            <h1
+              style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+            >
+              FrankCrum
+            </h1>
+          </div>
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+          >
+            CRM Customer Portal
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+          >
+            Sign in to access customer information
+          </p>
+          <form>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="email"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  fill="none"
+                  height="16"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="16"
+                >
+                  <rect
+                    height="16"
+                    rx="2"
+                    width="20"
+                    x="2"
+                    y="4"
+                  />
+                  <path
+                    d="M22 7l-10 7L2 7"
+                  />
+                </svg>
+                Email Address
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="margin-bottom: 1.5rem;"
+            >
+              <label
+                for="password"
+                style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                <svg
+                  height="14.816"
+                  viewBox="0 0 12.964 14.816"
+                  width="12.964"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                    style="fill: #414141;"
+                  />
+                </svg>
+                Password
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="password"
+                  type="password"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              style="width: 100%;"
+            >
+              <button
+                class="button-primary undefined"
+                type="submit"
+              >
+                Sign In
+              </button>
+            </div>
+          </form>
+          <div
+            style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+          >
+            <p
+              style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+            >
+              ┬⌐ 2025 Frank Crum. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/App.test.tsx:91:27
+     89|             );
+     90| 
+     91|             expect(screen.getByText('Welcome Back')).toBeInTheDocumentΓÇª
+       |                           ^
+     92|         });
+     93| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[4/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Rendering > should render navbar with brand and user info
+TestingLibraryElementError: Unable to find an element with the text: /welcome, johndoe/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              JohnDoe
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:47:27
+     45| 
+     46|             expect(screen.getByText('CRM Portal')).toBeInTheDocument();
+     47|             expect(screen.getByText(/welcome, johndoe/i)).toBeInTheDocΓÇª
+       |                           ^
+     48|             expect(screen.getByRole('button', { name: /logout/i })).toΓÇª
+     49|         });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[5/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Rendering > should render search form
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:62:27
+     60| 
+     61|             expect(screen.getByLabelText(/customer id/i)).toBeInTheDocΓÇª
+     62|             expect(screen.getByRole('button', { name: /search customerΓÇª
+       |                           ^
+     63|         });
+     64| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[6/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Rendering > should display default username when not in localStorage
+TestingLibraryElementError: Unable to find an element with the text: /welcome, user/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              User
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:68:27
+     66|             renderCustomerInfo('');
+     67| 
+     68|             expect(screen.getByText(/welcome, user/i)).toBeInTheDocumeΓÇª
+       |                           ^
+     69|         });
+     70|     });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[7/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should successfully search and display customer information
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:102:41
+    100| 
+    101|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    102|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    103| 
+    104|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[8/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display loading state during search
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:134:41
+    132| 
+    133|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    134|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    135| 
+    136|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[9/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display error message when customer not found
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:173:41
+    171| 
+    172|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    173|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    174| 
+    175|             await user.type(customerIdInput, '99999');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[10/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should display generic error message on network error
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:190:41
+    188| 
+    189|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    190|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    191| 
+    192|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[11/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should clear previous customer data on error
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:221:41
+    219| 
+    220|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    221|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    222| 
+    223|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[12/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Search Functionality > should require customer ID field
+Error: expect(element).toBeRequired()
+
+Received element is not required:
+  <input
+  class="form-control"
+  id="customerId"
+  type="text"
+  value=""
+/>
+ Γ¥» src/test/CustomerInfo.test.tsx:245:37
+    243|             renderCustomerInfo();
+    244|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    245|             expect(customerIdInput).toBeRequired();
+       |                                     ^
+    246|         });
+    247|     });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[13/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Customer Details Display > should display all customer fields correctly
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:269:41
+    267| 
+    268|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    269|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    270| 
+    271|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[14/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Customer Details Display > should display customer avatar with first letter of legal name
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:312:41
+    310| 
+    311|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    312|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    313| 
+    314|             await user.type(customerIdInput, '12345');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[15/27]ΓÄ»
+
+ FAIL  src/test/CustomerInfo.test.tsx > CustomerInfo Component > Error Handling > should clear error message on new search
+TestingLibraryElementError: Unable to find an accessible element with the role "button" and name `/search customer/i`
+
+Here are the accessible roles:
+
+  banner:
+
+  Name "":
+  <header
+    style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+  />
+
+  --------------------------------------------------
+  heading:
+
+  Name "FrankCrum":
+  <h1
+    style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+  />
+
+  Name "Customer Information":
+  <h1
+    style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+  />
+
+  Name "Search Customer":
+  <h2
+    style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+  />
+
+  --------------------------------------------------
+  strong:
+
+  Name "":
+  <strong />
+
+  --------------------------------------------------
+  button:
+
+  Name "Logout":
+  <button
+    class="button-secondary undefined"
+  />
+
+  Name "Search":
+  <button
+    class="button-primary undefined"
+    disabled=""
+    type="submit"
+  />
+
+  --------------------------------------------------
+  main:
+
+  Name "":
+  <main
+    style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+  />
+
+  --------------------------------------------------
+  paragraph:
+
+  Name "":
+  <p
+    style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+  />
+
+  --------------------------------------------------
+  textbox:
+
+  Name "Customer ID":
+  <input
+    class="form-control"
+    id="customerId"
+    type="text"
+    value=""
+  />
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; background-color: rgb(245, 245, 245);"
+    >
+      <header
+        style="background-color: rgb(15, 153, 214); color: white; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+      >
+        <div
+          style="display: flex; align-items: center; gap: 1rem;"
+        >
+          <h1
+            style="color: white; font-size: 1.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+          <div
+            style="border-left: 2px solid rgba(255, 255, 255, 0.3); padding-left: 1rem; font-size: 1.25rem; font-weight: 600;"
+          >
+            CRM Portal
+          </div>
+        </div>
+        <div
+          style="display: flex; align-items: center; gap: 1.5rem;"
+        >
+          <span
+            style="font-size: 0.95rem;"
+          >
+            Welcome, 
+            <strong>
+              TestUser
+            </strong>
+          </span>
+          <button
+            class="button-secondary undefined"
+          >
+            Logout
+          </button>
+        </div>
+      </header>
+      <main
+        style="max-width: 1200px; margin: 0px auto; padding: 2rem;"
+      >
+        <div
+          style="margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(11, 12, 13); font-size: 2rem; font-weight: 600; margin-bottom: 0.5rem;"
+          >
+            Customer Information
+          </h1>
+          <p
+            style="color: rgb(122, 134, 140); font-size: 1rem; margin: 0px;"
+          >
+            Search and view customer details
+          </p>
+        </div>
+        <div
+          style="background-color: white; border-radius: 8px; padding: 2rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1);"
+        >
+          <h2
+            style="color: rgb(11, 12, 13); font-size: 1.25rem; font-weight: 600; margin-bottom: 1.5rem;"
+          >
+            Search Customer
+          </h2>
+          <form
+            style="display: flex; gap: 1rem; align-items: flex-end;"
+          >
+            <div
+              style="flex: 1 1 0%; max-width: 400px;"
+            >
+              <label
+                for="customerId"
+                style="display: block; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+              >
+                Customer ID
+              </label>
+              <div
+                class="input-container"
+              >
+                <input
+                  class="form-control"
+                  id="customerId"
+                  type="text"
+                  value=""
+                />
+              </div>
+            </div>
+            <button
+              class="button-primary undefined"
+              disabled=""
+              type="submit"
+            >
+              Search
+            </button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/CustomerInfo.test.tsx:350:41
+    348| 
+    349|             const customerIdInput = screen.getByLabelText(/customer idΓÇª
+    350|             const searchButton = screen.getByRole('button', { name: /sΓÇª
+       |                                         ^
+    351| 
+    352|             await user.type(customerIdInput, '11111');
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[16/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Rendering > should render login form with all elements
+TestingLibraryElementError: Unable to find an element with the text: Welcome Back. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:43:27
+     41|             renderLogin();
+     42| 
+     43|             expect(screen.getByText('Welcome Back')).toBeInTheDocumentΓÇª
+       |                           ^
+     44|             expect(screen.getByText('Sign in to access CRM Customer PoΓÇª
+     45|             expect(screen.getByLabelText(/username/i)).toBeInTheDocumeΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[17/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Rendering > should render logo
+TestingLibraryElementError: Unable to find an element with the text: C. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:52:27
+     50|         it('should render logo', () => {
+     51|             renderLogin();
+     52|             expect(screen.getByText('C')).toBeInTheDocument();
+       |                           ^
+     53|         });
+     54| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[18/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Rendering > should have username input focused on mount
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:57:42
+     55|         it('should have username input focused on mount', () => {
+     56|             renderLogin();
+     57|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+     58|             expect(usernameInput).toHaveFocus();
+     59|         });
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[19/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Interaction > should update username input value
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:67:42
+     65|             renderLogin();
+     66| 
+     67|             const usernameInput = screen.getByLabelText(/username/i) aΓÇª
+       |                                          ^
+     68|             await user.type(usernameInput, 'testuser');
+     69| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[20/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Interaction > should require username and password fields
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:86:42
+     84|             renderLogin();
+     85| 
+     86|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+     87|             const passwordInput = screen.getByLabelText(/password/i);
+     88| 
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[21/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Success > should successfully login and redirect
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:113:42
+    111|             renderLogin();
+    112| 
+    113|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    114|             const passwordInput = screen.getByLabelText(/password/i);
+    115|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[22/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Success > should show loading state during login
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:159:42
+    157|             renderLogin();
+    158| 
+    159|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    160|             const passwordInput = screen.getByLabelText(/password/i);
+    161|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[23/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Failure > should display error message on login failure
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:195:42
+    193|             renderLogin();
+    194| 
+    195|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    196|             const passwordInput = screen.getByLabelText(/password/i);
+    197|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[24/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Failure > should display error message on network error
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:224:42
+    222|             renderLogin();
+    223| 
+    224|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    225|             const passwordInput = screen.getByLabelText(/password/i);
+    226|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[25/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Failure > should display generic error message when no specific error is provided
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:243:42
+    241|             renderLogin();
+    242| 
+    243|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    244|             const passwordInput = screen.getByLabelText(/password/i);
+    245|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[26/27]ΓÄ»
+
+ FAIL  src/test/Login.test.tsx > Login Component > Form Submission - Failure > should clear previous error messages on new submission
+TestingLibraryElementError: Unable to find a label with the text of: /username/i
+
+Ignored nodes: comments, script, style
+<body>
+  <div>
+    <div
+      style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: rgb(245, 245, 245); padding: 2rem;"
+    >
+      <div
+        style="background-color: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 3rem; width: 100%; max-width: 450px;"
+      >
+        <div
+          style="text-align: center; margin-bottom: 2rem;"
+        >
+          <h1
+            style="color: rgb(15, 153, 214); font-size: 2.5rem; font-weight: 700; margin: 0px;"
+          >
+            FrankCrum
+          </h1>
+        </div>
+        <h1
+          style="color: rgb(15, 153, 214); font-size: 1.75rem; font-weight: 600; text-align: center; margin-bottom: 0.5rem;"
+        >
+          CRM Customer Portal
+        </h1>
+        <p
+          style="color: rgb(122, 134, 140); text-align: center; margin-bottom: 2rem; font-size: 0.95rem;"
+        >
+          Sign in to access customer information
+        </p>
+        <form>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="email"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                fill="none"
+                height="16"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="16"
+              >
+                <rect
+                  height="16"
+                  rx="2"
+                  width="20"
+                  x="2"
+                  y="4"
+                />
+                <path
+                  d="M22 7l-10 7L2 7"
+                />
+              </svg>
+              Email Address
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="email"
+                type="email"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="margin-bottom: 1.5rem;"
+          >
+            <label
+              for="password"
+              style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; color: rgb(11, 12, 13); font-size: 0.95rem; font-weight: 500;"
+            >
+              <svg
+                height="14.816"
+                viewBox="0 0 12.964 14.816"
+                width="12.964"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.575 6.482h-.695V4.4a4.4 4.4 0 0 0-8.8 0v2.082h-.691A1.389 1.389 0 0 0 0 7.871v5.556a1.389 1.389 0 0 0 1.389 1.389h10.186a1.389 1.389 0 0 0 1.389-1.389V7.871a1.389 1.389 0 0 0-1.389-1.389zm-3.01 0H4.4V4.4a2.084 2.084 0 0 1 4.167 0z"
+                  style="fill: #414141;"
+                />
+              </svg>
+              Password
+            </label>
+            <div
+              class="input-container"
+            >
+              <input
+                class="form-control"
+                id="password"
+                type="password"
+                value=""
+              />
+            </div>
+          </div>
+          <div
+            style="width: 100%;"
+          >
+            <button
+              class="button-primary undefined"
+              type="submit"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
+        <div
+          style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgb(224, 224, 224); text-align: center;"
+        >
+          <p
+            style="color: rgb(122, 134, 140); font-size: 0.85rem; margin: 0px;"
+          >
+            ┬⌐ 2025 Frank Crum. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+ Γ¥» Object.getElementError node_modules/@testing-library/dom/dist/config.js:37:19
+ Γ¥» getAllByLabelText node_modules/@testing-library/dom/dist/queries/label-text.js:111:38
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ Γ¥» node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ Γ¥» src/test/Login.test.tsx:268:42
+    266|             renderLogin();
+    267| 
+    268|             const usernameInput = screen.getByLabelText(/username/i);
+       |                                          ^
+    269|             const passwordInput = screen.getByLabelText(/password/i);
+    270|             const submitButton = screen.getByRole('button', { name: /sΓÇª
+
+ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»ΓÄ»[27/27]ΓÄ»
+
+
+[2m Test Files [22m [1m[31m3 failed[39m[22m[90m (3)[39m
+[2m      Tests [22m [1m[31m27 failed[39m[22m[2m | [22m[1m[32m8 passed[39m[22m[90m (35)[39m
+[2m   Start at [22m 14:05:33
+[2m   Duration [22m 2.23s[2m (transform 184ms, setup 526ms, import 582ms, tests 1.59s, environment 1.68s)[22m
+

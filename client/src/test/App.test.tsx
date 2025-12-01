@@ -42,7 +42,7 @@ describe('App Component', () => {
                 </MemoryRouter>
             );
 
-            expect(screen.getByText('Welcome Back')).toBeInTheDocument();
+            expect(screen.getByText('CRM Customer Portal')).toBeInTheDocument();
         });
 
         it('should redirect to login when accessing /customer without token', () => {
@@ -52,7 +52,7 @@ describe('App Component', () => {
                 </MemoryRouter>
             );
 
-            expect(screen.getByText('Welcome Back')).toBeInTheDocument();
+            expect(screen.getByText('CRM Customer Portal')).toBeInTheDocument();
         });
 
         it('should render CustomerInfo component when accessing /customer with token', () => {
@@ -74,7 +74,7 @@ describe('App Component', () => {
                 </MemoryRouter>
             );
 
-            expect(screen.getByText('Welcome Back')).toBeInTheDocument();
+            expect(screen.getByText('CRM Customer Portal')).toBeInTheDocument();
         });
     });
 
@@ -88,7 +88,7 @@ describe('App Component', () => {
                 </MemoryRouter>
             );
 
-            expect(screen.getByText('Welcome Back')).toBeInTheDocument();
+            expect(screen.getByText('CRM Customer Portal')).toBeInTheDocument();
         });
 
         it('should allow access to /customer route when token exists', () => {
