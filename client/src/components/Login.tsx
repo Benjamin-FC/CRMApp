@@ -52,7 +52,7 @@ export default function Login() {
                 width: '100%',
                 maxWidth: '450px'
             }}>
-                <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+                    <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                     <h1 style={{
                         color: '#0f99d6',
                         fontSize: '2.5rem',
@@ -84,21 +84,21 @@ export default function Login() {
 
                 <form onSubmit={handleSubmit}>
                     <div style={{ marginBottom: '1.5rem' }}>
-                        <label htmlFor="email" style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '0.5rem',
-                            marginBottom: '0.5rem',
-                            color: '#0b0c0d',
-                            fontSize: '0.95rem',
-                            fontWeight: '500'
-                        }}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <rect x="2" y="4" width="20" height="16" rx="2" />
-                                <path d="M22 7l-10 7L2 7" />
-                            </svg>
-                            Email Address
-                        </label>
+                            <label htmlFor="email" style={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: '0.5rem',
+                                marginBottom: '0.5rem',
+                                color: '#0b0c0d',
+                                fontSize: '0.95rem',
+                                fontWeight: '500'
+                            }}>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                                    <path d="M22 7l-10 7L2 7" />
+                                </svg>
+                                Email Address
+                            </label>
                         <FCInput
                             id="email"
                             type="email"
