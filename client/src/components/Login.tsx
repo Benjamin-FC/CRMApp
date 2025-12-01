@@ -1,7 +1,7 @@
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { authService } from '../services/api';
-import { FCInput, FCButton, LockIcon, FCFullColorLogo } from '@frankcrum/common-ui-shared-components';
+import { FCInput, FCButton, LockIcon } from '@frankcrum/common-ui-shared-components';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -53,7 +53,14 @@ export default function Login() {
                 maxWidth: '450px'
             }}>
                 <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                    <FCFullColorLogo width={200} height={60} />
+                    <h1 style={{
+                        color: '#0f99d6',
+                        fontSize: '2.5rem',
+                        fontWeight: '700',
+                        margin: 0
+                    }}>
+                        FrankCrum
+                    </h1>
                 </div>
 
                 <h1 style={{

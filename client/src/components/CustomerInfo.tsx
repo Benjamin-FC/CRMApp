@@ -25,7 +25,16 @@ export default function CustomerInfo() {
             setError('');
         } catch (err: any) {
             console.error('Error fetching customer:', err);
-            const errorMessage = err.response?.data?.message || err.message || 'Failed to fetch customer information';
+            // Simplify error message - show user-friendly message only
+            let errorMessage = 'Customer not found or unable to retrieve customer information';
+            
+            // Check if it's a 404 (not found)
+            if (err.response?.status === 404) {
+                errorMessage = 'Customer not found';
+            } else if (err.response?.status === 503 || err.response?.status === 500) {
+                errorMessage = 'Unable to retrieve customer information. Please try again later';
+            }
+            
             setError(errorMessage);
             setCustomer(null);
         } finally {
@@ -40,31 +49,88 @@ export default function CustomerInfo() {
     };
 
     return (
-        <div className="customer-page">
-            <nav className="navbar" style={{ backgroundColor: '#0f99d6', color: 'white', padding: '1rem 2rem' }}>
-                <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
-                    <span>CRM Portal</span>
+        <div style={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
+            {/* Header */}
+            <header style={{
+                backgroundColor: '#0f99d6',
+                color: 'white',
+                padding: '1rem 2rem',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+            }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <h1 style={{
+                        color: 'white',
+                        fontSize: '1.5rem',
+                        fontWeight: '700',
+                        margin: 0
+                    }}>
+                        FrankCrum
+                    </h1>
+                    <div style={{
+                        borderLeft: '2px solid rgba(255,255,255,0.3)',
+                        paddingLeft: '1rem',
+                        fontSize: '1.25rem',
+                        fontWeight: '600'
+                    }}>
+                        CRM Portal
+                    </div>
                 </div>
-                <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-                    <span style={{ color: 'white' }}>Welcome, {username}</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                    <span style={{ fontSize: '0.95rem' }}>Welcome, <strong>{username}</strong></span>
                     <FCButton
                         variant="secondary"
                         onClick={handleLogout}
                         text="Logout"
                     />
                 </div>
-            </nav>
+            </header>
 
-            <div className="customer-container">
-                <div>
-                    <h1>Customer Information</h1>
-                    <p>Search and view customer details</p>
+            {/* Main Content */}
+            <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+                {/* Page Title */}
+                <div style={{ marginBottom: '2rem' }}>
+                    <h1 style={{
+                        color: '#0b0c0d',
+                        fontSize: '2rem',
+                        fontWeight: '600',
+                        marginBottom: '0.5rem'
+                    }}>
+                        Customer Information
+                    </h1>
+                    <p style={{ color: '#7a868c', fontSize: '1rem', margin: 0 }}>
+                        Search and view customer details
+                    </p>
                 </div>
 
-                <div className="search-card">
-                    <form className="search-form" onSubmit={handleSearch}>
-                        <div className="search-input-wrapper">
-                            <label htmlFor="customerId">
+                {/* Search Card */}
+                <div style={{
+                    backgroundColor: 'white',
+                    borderRadius: '8px',
+                    padding: '2rem',
+                    marginBottom: '2rem',
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                }}>
+                    <h2 style={{
+                        color: '#0b0c0d',
+                        fontSize: '1.25rem',
+                        fontWeight: '600',
+                        marginBottom: '1.5rem'
+                    }}>
+                        Search Customer
+                    </h2>
+
+                    <form onSubmit={handleSearch} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-end' }}>
+                        <div style={{ flex: 1, maxWidth: '400px' }}>
+                            <label htmlFor="customerId" style={{
+                                display: 'block',
+                                marginBottom: '0.5rem',
+                                color: '#0b0c0d',
+                                fontSize: '0.95rem',
+                                fontWeight: '500'
+                            }}>
                                 Customer ID
                             </label>
                             <FCInput
@@ -80,85 +146,272 @@ export default function CustomerInfo() {
                         <FCButton
                             type="submit"
                             variant="primary"
-                            disabled={loading}
-                            text={loading ? 'Searching...' : 'Search Customer'}
+                            disabled={loading || !customerId}
+                            text={loading ? 'Searching...' : 'Search'}
                         />
                     </form>
                 </div>
 
+                {/* Error Message */}
                 {error && (
-                    <div className="error-message">
-                        <strong>⚠️ Error:</strong> {error}
+                    <div style={{
+                        backgroundColor: '#f8d7da',
+                        border: '2px solid #dc3545',
+                        borderRadius: '8px',
+                        padding: '1.5rem 2rem',
+                        marginBottom: '2rem',
+                        color: '#721c24',
+                        fontSize: '1.1rem',
+                        fontWeight: '600',
+                        display: 'block',
+                        width: '100%',
+                        boxSizing: 'border-box'
+                    }}>
+                        <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>⚠️</div>
+                        <strong>Error:</strong> {error}
                     </div>
                 )}
 
+                {/* No Results Message */}
                 {!loading && !error && !customer && searched && (
-                    <div className="error-message" style={{ background: '#e3f2fd', border: '2px solid #2196f3', color: '#1565c0' }}>
-                        <strong>ℹ️ Info:</strong> No customer found. Try a different Customer ID.
+                    <div style={{
+                        backgroundColor: '#e3f2fd',
+                        border: '2px solid #2196f3',
+                        borderRadius: '8px',
+                        padding: '1.5rem 2rem',
+                        marginBottom: '2rem',
+                        color: '#1565c0',
+                        fontSize: '1.1rem',
+                        fontWeight: '600',
+                        display: 'block',
+                        width: '100%',
+                        boxSizing: 'border-box'
+                    }}>
+                        <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>ℹ️</div>
+                        <strong>Info:</strong> No customer found. Please try a different Customer ID.
                     </div>
                 )}
 
+                {/* Loading Spinner */}
                 {loading && (
-                    <div className="loading-spinner">
-                        <div className="spinner"></div>
-                        <p>Loading customer information...</p>
+                    <div style={{
+                        backgroundColor: 'white',
+                        borderRadius: '8px',
+                        padding: '3rem',
+                        textAlign: 'center',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                    }}>
+                        <div style={{
+                            width: '50px',
+                            height: '50px',
+                            border: '4px solid #f3f3f3',
+                            borderTop: '4px solid #0f99d6',
+                            borderRadius: '50%',
+                            animation: 'spin 1s linear infinite',
+                            margin: '0 auto 1rem'
+                        }} />
+                        <p style={{ color: '#7a868c', fontSize: '1rem', margin: 0 }}>
+                            Loading customer information...
+                        </p>
                     </div>
                 )}
 
+                {/* Customer Details Card */}
                 {customer && !loading && (
-                    <div className="customer-info-card">
-                        <div className="customer-header">
-                            <div className="customer-avatar">
+                    <div style={{
+                        backgroundColor: 'white',
+                        borderRadius: '8px',
+                        padding: '2rem',
+                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+                    }}>
+                        {/* Customer Header */}
+                        <div style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '1.5rem',
+                            paddingBottom: '1.5rem',
+                            borderBottom: '2px solid #f0f0f0',
+                            marginBottom: '2rem'
+                        }}>
+                            <div style={{
+                                width: '80px',
+                                height: '80px',
+                                borderRadius: '50%',
+                                backgroundColor: '#0f99d6',
+                                color: 'white',
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                fontSize: '2rem',
+                                fontWeight: '700'
+                            }}>
                                 {customer.clientLegalName.charAt(0).toUpperCase()}
                             </div>
-                            <div className="customer-header-info">
-                                <h2 className="customer-name">
+                            <div style={{ flex: 1 }}>
+                                <h2 style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1.75rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.25rem'
+                                }}>
                                     {customer.clientLegalName}
                                 </h2>
-                                <p className="customer-id">ID: {customer.clientId}</p>
+                                <p style={{
+                                    color: '#7a868c',
+                                    fontSize: '1rem',
+                                    margin: 0
+                                }}>
+                                    Customer ID: <strong>{customer.clientId}</strong>
+                                </p>
                             </div>
-                            <div className="status-badge">{customer.status}</div>
+                            <div style={{
+                                backgroundColor: customer.status === 'Active' ? '#d4edda' : '#f8d7da',
+                                color: customer.status === 'Active' ? '#155724' : '#721c24',
+                                padding: '0.5rem 1rem',
+                                borderRadius: '20px',
+                                fontSize: '0.9rem',
+                                fontWeight: '600'
+                            }}>
+                                {customer.status}
+                            </div>
                         </div>
 
-                        <div className="customer-details">
-                            <div className="detail-item">
-                                <div className="detail-label">DBA</div>
-                                <div className="detail-value">{customer.dba}</div>
+                        {/* Customer Details Grid */}
+                        <div style={{
+                            display: 'grid',
+                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+                            gap: '1.5rem'
+                        }}>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    DBA
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.dba || 'N/A'}
+                                </div>
                             </div>
 
-                            <div className="detail-item">
-                                <div className="detail-label">Edit Approval</div>
-                                <div className="detail-value">{customer.editApproval}</div>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Edit Approval
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.editApproval || 'N/A'}
+                                </div>
                             </div>
 
-                            <div className="detail-item">
-                                <div className="detail-label">Compliance Hold</div>
-                                <div className="detail-value">{customer.complianceHold}</div>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Compliance Hold
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.complianceHold || 'N/A'}
+                                </div>
                             </div>
 
-                            <div className="detail-item">
-                                <div className="detail-label">Level</div>
-                                <div className="detail-value">{customer.level}</div>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Level
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.level || 'N/A'}
+                                </div>
                             </div>
 
-                            <div className="detail-item">
-                                <div className="detail-label">Payment Term ID</div>
-                                <div className="detail-value">{customer.paymentTermID}</div>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Payment Term ID
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.paymentTermID || 'N/A'}
+                                </div>
                             </div>
 
-                            <div className="detail-item">
-                                <div className="detail-label">Payment Method</div>
-                                <div className="detail-value">{customer.paymentMethod}</div>
-                            </div>
-
-                            <div className="detail-item">
-                                <div className="detail-label">Account Status</div>
-                                <div className="detail-value">{customer.status}</div>
+                            <div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginBottom: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Payment Method
+                                </div>
+                                <div style={{
+                                    color: '#0b0c0d',
+                                    fontSize: '1rem',
+                                    fontWeight: '500'
+                                }}>
+                                    {customer.paymentMethod || 'N/A'}
+                                </div>
                             </div>
                         </div>
                     </div>
                 )}
-            </div>
+            </main>
+
+            <style>{`
+                @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+            `}</style>
         </div>
     );
 }
