@@ -379,8 +379,10 @@ describe('CustomerInfo Component', () => {
             await user.click(searchButton);
 
             await waitFor(() => {
-                expect(screen.getByText(/customer not found/i)).toBeInTheDocument();
+                expect(screen.queryByText(/customer not found/i)).not.toBeInTheDocument();
+                expect(screen.getByText('Test LLC')).toBeInTheDocument();
             });
         });
     });
 });
+
