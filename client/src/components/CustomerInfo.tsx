@@ -35,12 +35,12 @@ export default function CustomerInfo() {
 
     return (
         <div className="customer-page">
-            <nav className="navbar">
-                <div>
+            <nav className="navbar" style={{ backgroundColor: '#0f99d6', color: 'white', padding: '1rem 2rem' }}>
+                <div style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>
                     <span>CRM Portal</span>
                 </div>
-                <div className="navbar-actions">
-                    <span>Welcome, {username}</span>
+                <div className="navbar-actions" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
+                    <span style={{ color: 'white' }}>Welcome, {username}</span>
                     <FCButton
                         variant="secondary"
                         onClick={handleLogout}

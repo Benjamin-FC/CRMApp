@@ -38,10 +38,14 @@ public class CustomerController : ControllerBase
             return BadRequest(new { message = "Customer ID is required" });
         }
 
-        var customerInfo = await _crmService.GetCustomerInfoAsync(customerId, token);
+        var (customerInfo, errorMessage) = await _crmService.GetCustomerInfoAsync(customerId, token);
 
         if (customerInfo == null)
         {
+            if (!string.IsNullOrEmpty(errorMessage))
+            {
+                return StatusCode(503, new { message = $"CRM backend error: {errorMessage}" });
+            }
             return NotFound(new { message = "Customer not found" });
         }
 

@@ -6,7 +6,7 @@ namespace CRMWebSpa.Server.Services;
 
 public interface ICRMService
 {
-    Task<CustomerInfo?> GetCustomerInfoAsync(string customerId, string token);
+    Task<(CustomerInfo?, string?)> GetCustomerInfoAsync(string customerId, string token);
 }
 
 public class CRMService : ICRMService
@@ -22,7 +22,7 @@ public class CRMService : ICRMService
         _logger = logger;
     }
 
-    public async Task<CustomerInfo?> GetCustomerInfoAsync(string customerId, string token)
+    public async Task<(CustomerInfo?, string?)> GetCustomerInfoAsync(string customerId, string token)
     {
         try
         {
@@ -47,17 +47,24 @@ public class CRMService : ICRMService
                 });
 
                 _logger.LogInformation("Successfully retrieved customer info for customerId: {CustomerId}", customerId);
-                return customerInfo;
+                return (customerInfo, null);
             }
             
-            _logger.LogWarning("Failed to retrieve customer info for customerId: {CustomerId}. Status code: {StatusCode}", 
-                customerId, response.StatusCode);
-            return null;
+            var errorContent = await response.Content.ReadAsStringAsync();
+            _logger.LogWarning("Failed to retrieve customer info for customerId: {CustomerId}. Status code: {StatusCode}, Response: {Response}", 
+                customerId, response.StatusCode, errorContent);
+            
+            return (null, $"Backend returned {response.StatusCode}: {errorContent}");
+        }
+        catch (HttpRequestException ex)
+        {
+            _logger.LogError(ex, "HTTP error fetching customer info for customerId: {CustomerId}", customerId);
+            return (null, $"Cannot connect to CRM backend: {ex.Message}");
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error fetching customer info for customerId: {CustomerId}", customerId);
-            return null;
+            return (null, $"Internal error: {ex.Message}");
         }
     }
 }

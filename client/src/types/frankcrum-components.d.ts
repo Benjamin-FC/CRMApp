@@ -34,5 +34,6 @@ declare module '@frankcrum/common-ui-shared-components' {
   export const FCAvatarIcon: React.FC<any>;
   export const LockIcon: React.FC<any>;
   export const FCFullColorLogo: React.FC<any>;
+  export const FCCard: React.FC<{ showImage?: boolean; cardTitle?: string; cardText?: string; buttonText?: string; className?: string; children?: React.ReactNode; image?: string }>;
   // Add other components as needed
 }
