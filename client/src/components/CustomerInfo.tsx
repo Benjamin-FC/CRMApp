@@ -9,18 +9,24 @@ export default function CustomerInfo() {
     const [customer, setCustomer] = useState<CustomerInfoType | null>(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [searched, setSearched] = useState(false);
     const username = localStorage.getItem('username') || 'User';
 
     const handleSearch = async (e: FormEvent) => {
         e.preventDefault();
         setError('');
+        setCustomer(null);
+        setSearched(true);
         setLoading(true);
 
         try {
             const data = await customerService.getCustomer(customerId);
             setCustomer(data);
+            setError('');
         } catch (err: any) {
-            setError(err.response?.data?.message || 'Failed to fetch customer information');
+            console.error('Error fetching customer:', err);
+            const errorMessage = err.response?.data?.message || err.message || 'Failed to fetch customer information';
+            setError(errorMessage);
             setCustomer(null);
         } finally {
             setLoading(false);
@@ -78,9 +84,19 @@ export default function CustomerInfo() {
                             text={loading ? 'Searching...' : 'Search Customer'}
                         />
                     </form>
-
-                    {error && <div className="error-message" style={{ marginTop: '1rem' }}>{error}</div>}
                 </div>
+
+                {error && (
+                    <div className="error-message">
+                        <strong>⚠️ Error:</strong> {error}
+                    </div>
+                )}
+
+                {!loading && !error && !customer && searched && (
+                    <div className="error-message" style={{ background: '#e3f2fd', border: '2px solid #2196f3', color: '#1565c0' }}>
+                        <strong>ℹ️ Info:</strong> No customer found. Try a different Customer ID.
+                    </div>
+                )}
 
                 {loading && (
                     <div className="loading-spinner">
