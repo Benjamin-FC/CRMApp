@@ -3,6 +3,100 @@ import { useNavigate } from 'react-router-dom';
 import { customerService, type CustomerInfo as CustomerInfoType } from '../services/api';
 import { FCInput, FCButton } from '@frankcrum/common-ui-shared-components';
 
+const headerStyle = {
+    backgroundColor: '#0f99d6',
+    color: 'white',
+    padding: '1rem 2rem',
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+};
+
+const flexRowStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1rem'
+};
+
+const flexRowEndStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1.5rem'
+};
+
+const mainStyle = {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '2rem'
+};
+
+const cardStyle = {
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '2rem',
+    marginBottom: '2rem',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+};
+
+const errorStyle = {
+    backgroundColor: '#f8d7da',
+    border: '2px solid #dc3545',
+    borderRadius: '8px',
+    padding: '1.5rem 2rem',
+    marginBottom: '2rem',
+    color: '#721c24',
+    fontSize: '1.1rem',
+    fontWeight: '600',
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box' as const
+};
+
+const infoStyle = {
+    backgroundColor: '#e3f2fd',
+    border: '2px solid #2196f3',
+    borderRadius: '8px',
+    padding: '1.5rem 2rem',
+    marginBottom: '2rem',
+    color: '#1565c0',
+    fontSize: '1.1rem',
+    fontWeight: '600',
+    display: 'block',
+    width: '100%',
+    boxSizing: 'border-box' as const
+};
+
+const spinnerCardStyle = {
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '3rem',
+    textAlign: 'center' as const,
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+};
+
+const detailsCardStyle = {
+    backgroundColor: 'white',
+    borderRadius: '8px',
+    padding: '2rem',
+    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+};
+
+const detailsHeaderStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '1.5rem',
+    paddingBottom: '1.5rem',
+    borderBottom: '2px solid #f0f0f0',
+    marginBottom: '2rem'
+};
+
+const detailsGridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '1.5rem'
+};
+
 export default function CustomerInfo() {
     const navigate = useNavigate();
     const [customerId, setCustomerId] = useState('');
@@ -51,16 +145,8 @@ export default function CustomerInfo() {
     return (
         <div style={{ minHeight: '100vh', backgroundColor: '#f5f5f5' }}>
             {/* Header */}
-            <header style={{
-                backgroundColor: '#0f99d6',
-                color: 'white',
-                padding: '1rem 2rem',
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center',
-                boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-            }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <header style={headerStyle}>
+                <div style={flexRowStyle}>
                     <h1 style={{
                         color: 'white',
                         fontSize: '1.5rem',
@@ -78,7 +164,7 @@ export default function CustomerInfo() {
                         CRM Portal
                     </div>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }}>
+                <div style={flexRowEndStyle}>
                     <span style={{ fontSize: '0.95rem' }}>Welcome, <strong>{username}</strong></span>
                     <FCButton
                         variant="secondary"
@@ -89,7 +175,7 @@ export default function CustomerInfo() {
             </header>
 
             {/* Main Content */}
-            <main style={{ maxWidth: '1200px', margin: '0 auto', padding: '2rem' }}>
+            <main style={mainStyle}>
                 {/* Page Title */}
                 <div style={{ marginBottom: '2rem' }}>
                     <h1 style={{
@@ -106,13 +192,7 @@ export default function CustomerInfo() {
                 </div>
 
                 {/* Search Card */}
-                <div style={{
-                    backgroundColor: 'white',
-                    borderRadius: '8px',
-                    padding: '2rem',
-                    marginBottom: '2rem',
-                    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                }}>
+                <div style={cardStyle}>
                     <h2 style={{
                         color: '#0b0c0d',
                         fontSize: '1.25rem',
@@ -123,16 +203,26 @@ export default function CustomerInfo() {
                     </h2>
 
                     <form onSubmit={handleSearch} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-end' }}>
-                        <div style={{ flex: 1, maxWidth: '400px' }}>
-                            <FCInput
-                                id="customerId"
-                                type="text"
-                                placeholder="Enter customer ID"
-                                value={customerId}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomerId(e.target.value)}
-                                onValidate={() => {}}
-                                validationText=""
-                            />
+                        <div style={{ display: 'flex', flex: 1, maxWidth: '400px', flexDirection: 'column' }}>
+                            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', width: '100%' }}>
+                                <FCInput
+                                    id="customerId"
+                                    type="text"
+                                    placeholder="Enter customer ID"
+                                    value={customerId}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomerId(e.target.value)}
+                                    onValidate={() => {}}
+                                    validationText=""
+                                    style={{ flex: 1 }}
+                                />
+                                <FCButton
+                                    type="submit"
+                                    variant="primary"
+                                    disabled={loading || !customerId}
+                                    text={loading ? 'Searching...' : 'Search'}
+                                    style={{ marginLeft: '1rem', marginBottom: 0 }}
+                                />
+                            </div>
                             <label htmlFor="customerId" style={{
                                 display: 'block',
                                 marginTop: '0.5rem',
@@ -143,30 +233,12 @@ export default function CustomerInfo() {
                                 Customer ID
                             </label>
                         </div>
-                        <FCButton
-                            type="submit"
-                            variant="primary"
-                            disabled={loading || !customerId}
-                            text={loading ? 'Searching...' : 'Search'}
-                        />
                     </form>
                 </div>
 
                 {/* Error Message */}
                 {error && (
-                    <div style={{
-                        backgroundColor: '#f8d7da',
-                        border: '2px solid #dc3545',
-                        borderRadius: '8px',
-                        padding: '1.5rem 2rem',
-                        marginBottom: '2rem',
-                        color: '#721c24',
-                        fontSize: '1.1rem',
-                        fontWeight: '600',
-                        display: 'block',
-                        width: '100%',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div style={errorStyle}>
                         <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>⚠️</div>
                         <strong>Error:</strong> {error}
                     </div>
@@ -174,19 +246,7 @@ export default function CustomerInfo() {
 
                 {/* No Results Message */}
                 {!loading && !error && !customer && searched && (
-                    <div style={{
-                        backgroundColor: '#e3f2fd',
-                        border: '2px solid #2196f3',
-                        borderRadius: '8px',
-                        padding: '1.5rem 2rem',
-                        marginBottom: '2rem',
-                        color: '#1565c0',
-                        fontSize: '1.1rem',
-                        fontWeight: '600',
-                        display: 'block',
-                        width: '100%',
-                        boxSizing: 'border-box'
-                    }}>
+                    <div style={infoStyle}>
                         <div style={{ marginBottom: '0.5rem', fontSize: '1.5rem' }}>ℹ️</div>
                         <strong>Info:</strong> No customer found. Please try a different Customer ID.
                     </div>
@@ -194,13 +254,7 @@ export default function CustomerInfo() {
 
                 {/* Loading Spinner */}
                 {loading && (
-                    <div style={{
-                        backgroundColor: 'white',
-                        borderRadius: '8px',
-                        padding: '3rem',
-                        textAlign: 'center',
-                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                    }}>
+                    <div style={spinnerCardStyle}>
                         <div style={{
                             width: '50px',
                             height: '50px',
@@ -218,21 +272,9 @@ export default function CustomerInfo() {
 
                 {/* Customer Details Card */}
                 {customer && !loading && (
-                    <div style={{
-                        backgroundColor: 'white',
-                        borderRadius: '8px',
-                        padding: '2rem',
-                        boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-                    }}>
+                    <div style={detailsCardStyle}>
                         {/* Customer Header */}
-                        <div style={{
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: '1.5rem',
-                            paddingBottom: '1.5rem',
-                            borderBottom: '2px solid #f0f0f0',
-                            marginBottom: '2rem'
-                        }}>
+                        <div style={detailsHeaderStyle}>
                             <div style={{
                                 width: '80px',
                                 height: '80px',
@@ -277,11 +319,7 @@ export default function CustomerInfo() {
                         </div>
 
                         {/* Customer Details Grid */}
-                        <div style={{
-                            display: 'grid',
-                            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                            gap: '1.5rem'
-                        }}>
+                        <div style={detailsGridStyle}>
                             <div>
                                 <div style={{
                                     color: '#0b0c0d',
