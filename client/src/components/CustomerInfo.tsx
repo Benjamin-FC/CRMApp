@@ -124,15 +124,6 @@ export default function CustomerInfo() {
 
                     <form onSubmit={handleSearch} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-end' }}>
                         <div style={{ flex: 1, maxWidth: '400px' }}>
-                            <label htmlFor="customerId" style={{
-                                display: 'block',
-                                marginBottom: '0.5rem',
-                                color: '#0b0c0d',
-                                fontSize: '0.95rem',
-                                fontWeight: '500'
-                            }}>
-                                Customer ID
-                            </label>
                             <FCInput
                                 id="customerId"
                                 type="text"
@@ -142,6 +133,15 @@ export default function CustomerInfo() {
                                 onValidate={() => {}}
                                 validationText=""
                             />
+                            <label htmlFor="customerId" style={{
+                                display: 'block',
+                                marginTop: '0.5rem',
+                                color: '#0b0c0d',
+                                fontSize: '0.95rem',
+                                fontWeight: '500'
+                            }}>
+                                Customer ID
+                            </label>
                         </div>
                         <FCButton
                             type="submit"
@@ -284,35 +284,25 @@ export default function CustomerInfo() {
                         }}>
                             <div>
                                 <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginBottom: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    DBA
-                                </div>
-                                <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
                                     fontWeight: '500'
                                 }}>
                                     {customer.dba || 'N/A'}
                                 </div>
-                            </div>
-
-                            <div>
                                 <div style={{
                                     color: '#7a868c',
                                     fontSize: '0.875rem',
                                     fontWeight: '600',
-                                    marginBottom: '0.5rem',
+                                    marginTop: '0.5rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 }}>
-                                    Edit Approval
+                                    DBA
                                 </div>
+                            </div>
+
+                            <div>
                                 <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
@@ -320,19 +310,19 @@ export default function CustomerInfo() {
                                 }}>
                                     {customer.editApproval || 'N/A'}
                                 </div>
-                            </div>
-
-                            <div>
                                 <div style={{
                                     color: '#7a868c',
                                     fontSize: '0.875rem',
                                     fontWeight: '600',
-                                    marginBottom: '0.5rem',
+                                    marginTop: '0.5rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 }}>
-                                    Compliance Hold
+                                    Edit Approval
                                 </div>
+                            </div>
+
+                            <div>
                                 <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
@@ -340,19 +330,19 @@ export default function CustomerInfo() {
                                 }}>
                                     {customer.complianceHold || 'N/A'}
                                 </div>
-                            </div>
-
-                            <div>
                                 <div style={{
                                     color: '#7a868c',
                                     fontSize: '0.875rem',
                                     fontWeight: '600',
-                                    marginBottom: '0.5rem',
+                                    marginTop: '0.5rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 }}>
-                                    Level
+                                    Compliance Hold
                                 </div>
+                            </div>
+
+                            <div>
                                 <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
@@ -360,19 +350,19 @@ export default function CustomerInfo() {
                                 }}>
                                     {customer.level || 'N/A'}
                                 </div>
-                            </div>
-
-                            <div>
                                 <div style={{
                                     color: '#7a868c',
                                     fontSize: '0.875rem',
                                     fontWeight: '600',
-                                    marginBottom: '0.5rem',
+                                    marginTop: '0.5rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 }}>
-                                    Payment Term ID
+                                    Level
                                 </div>
+                            </div>
+
+                            <div>
                                 <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
@@ -380,25 +370,35 @@ export default function CustomerInfo() {
                                 }}>
                                     {customer.paymentTermID || 'N/A'}
                                 </div>
-                            </div>
-
-                            <div>
                                 <div style={{
                                     color: '#7a868c',
                                     fontSize: '0.875rem',
                                     fontWeight: '600',
-                                    marginBottom: '0.5rem',
+                                    marginTop: '0.5rem',
                                     textTransform: 'uppercase',
                                     letterSpacing: '0.5px'
                                 }}>
-                                    Payment Method
+                                    Payment Term ID
                                 </div>
+                            </div>
+
+                            <div>
                                 <div style={{
                                     color: '#0b0c0d',
                                     fontSize: '1rem',
                                     fontWeight: '500'
                                 }}>
                                     {customer.paymentMethod || 'N/A'}
+                                </div>
+                                <div style={{
+                                    color: '#7a868c',
+                                    fontSize: '0.875rem',
+                                    fontWeight: '600',
+                                    marginTop: '0.5rem',
+                                    textTransform: 'uppercase',
+                                    letterSpacing: '0.5px'
+                                }}>
+                                    Payment Method
                                 </div>
                             </div>
                         </div>

@@ -84,21 +84,6 @@ export default function Login() {
 
                 <form onSubmit={handleSubmit}>
                     <div style={{ marginBottom: '1.5rem' }}>
-                            <label htmlFor="email" style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '0.5rem',
-                                marginBottom: '0.5rem',
-                                color: '#0b0c0d',
-                                fontSize: '0.95rem',
-                                fontWeight: '500'
-                            }}>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <rect x="2" y="4" width="20" height="16" rx="2" />
-                                    <path d="M22 7l-10 7L2 7" />
-                                </svg>
-                                Email Address
-                            </label>
                         <FCInput
                             id="email"
                             type="email"
@@ -108,21 +93,24 @@ export default function Login() {
                             onValidate={() => {}}
                             validationText=""
                         />
-                    </div>
-
-                    <div style={{ marginBottom: '1.5rem' }}>
-                        <label htmlFor="password" style={{
+                        <label htmlFor="email" style={{
                             display: 'flex',
                             alignItems: 'center',
                             gap: '0.5rem',
-                            marginBottom: '0.5rem',
+                            marginTop: '0.5rem',
                             color: '#0b0c0d',
                             fontSize: '0.95rem',
                             fontWeight: '500'
                         }}>
-                            <LockIcon width={16} height={16} />
-                            Password
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <rect x="2" y="4" width="20" height="16" rx="2" />
+                                <path d="M22 7l-10 7L2 7" />
+                            </svg>
+                            Email Address
                         </label>
+                    </div>
+
+                    <div style={{ marginBottom: '1.5rem' }}>
                         <FCInput
                             id="password"
                             type="password"
@@ -132,6 +120,18 @@ export default function Login() {
                             onValidate={() => {}}
                             validationText=""
                         />
+                        <label htmlFor="password" style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '0.5rem',
+                            marginTop: '0.5rem',
+                            color: '#0b0c0d',
+                            fontSize: '0.95rem',
+                            fontWeight: '500'
+                        }}>
+                            <LockIcon width={16} height={16} />
+                            Password
+                        </label>
                     </div>
 
                     {error && (
