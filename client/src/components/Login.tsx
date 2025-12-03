@@ -45,12 +45,14 @@ export default function Login() {
             padding: '2rem'
         }}>
             <div style={{
-                backgroundColor: 'white',
+                backgroundColor: '#fcf8f7',
                 borderRadius: '8px',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+                boxShadow: '0 2px 4px rgba(0,0,0,0.07)',
+                borderTop: '4px solid #e0e0e0',
                 padding: '3rem',
                 width: '100%',
-                maxWidth: '450px'
+                maxWidth: '450px',
+                marginTop: '2rem',
             }}>
                     <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
                     <h1 style={{
@@ -98,9 +100,12 @@ export default function Login() {
                             alignItems: 'center',
                             gap: '0.5rem',
                             marginTop: '0.5rem',
-                            color: '#0b0c0d',
-                            fontSize: '0.95rem',
-                            fontWeight: '500'
+                            fontSize: '0.85rem',
+                            color: '#a0a0a0',
+                            fontWeight: 600,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            lineHeight: 1.1,
                         }}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -125,9 +130,12 @@ export default function Login() {
                             alignItems: 'center',
                             gap: '0.5rem',
                             marginTop: '0.5rem',
-                            color: '#0b0c0d',
-                            fontSize: '0.95rem',
-                            fontWeight: '500'
+                            fontSize: '0.85rem',
+                            color: '#a0a0a0',
+                            fontWeight: 600,
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.5px',
+                            lineHeight: 1.1,
                         }}>
                             <LockIcon width={16} height={16} />
                             Password

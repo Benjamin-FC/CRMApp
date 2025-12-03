@@ -1,3 +1,11 @@
+const fieldLabelBelowStyle = {
+    color: '#7a868c',
+    fontSize: '0.875rem',
+    fontWeight: '600',
+    marginTop: '0.5rem',
+    textTransform: 'uppercase' as const,
+    letterSpacing: '0.5px'
+};
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { customerService, type CustomerInfo as CustomerInfoType } from '../services/api';
@@ -32,11 +40,13 @@ const mainStyle = {
 };
 
 const cardStyle = {
-    backgroundColor: 'white',
+    backgroundColor: '#fcf8f7',
     borderRadius: '8px',
     padding: '2rem',
     marginBottom: '2rem',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    boxShadow: '0 2px 4px rgba(0,0,0,0.07)',
+    borderTop: '4px solid #e0e0e0',
+    marginTop: '2rem',
 };
 
 const errorStyle = {
@@ -76,10 +86,12 @@ const spinnerCardStyle = {
 };
 
 const detailsCardStyle = {
-    backgroundColor: 'white',
+    backgroundColor: '#fcf8f7',
     borderRadius: '8px',
     padding: '2rem',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+    boxShadow: '0 2px 4px rgba(0,0,0,0.07)',
+    borderTop: '4px solid #e0e0e0',
+    marginTop: '2rem',
 };
 
 const detailsHeaderStyle = {
@@ -93,8 +105,27 @@ const detailsHeaderStyle = {
 
 const detailsGridStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-    gap: '1.5rem'
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+    gap: '0.5rem 2rem',
+    padding: '0.5rem 0',
+};
+
+const detailsFieldValueStyle = {
+    fontSize: '1.1rem',
+    fontWeight: 600,
+    color: '#222',
+    lineHeight: 1.2,
+    marginBottom: '0.15rem',
+};
+
+const detailsFieldLabelStyle = {
+    fontSize: '0.85rem',
+    color: '#a0a0a0',
+    fontWeight: 600,
+    textTransform: 'uppercase',
+    letterSpacing: '0.5px',
+    marginTop: '0.15rem',
+    lineHeight: 1.1,
 };
 
 export default function CustomerInfo() {
@@ -205,23 +236,25 @@ export default function CustomerInfo() {
                     <form onSubmit={handleSearch} style={{ display: 'flex', gap: '1rem', alignItems: 'flex-end' }}>
                         <div style={{ display: 'flex', flex: 1, maxWidth: '400px', flexDirection: 'column' }}>
                             <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-end', width: '100%' }}>
-                                <FCInput
-                                    id="customerId"
-                                    type="text"
-                                    placeholder="Enter customer ID"
-                                    value={customerId}
-                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomerId(e.target.value)}
-                                    onValidate={() => {}}
-                                    validationText=""
-                                    style={{ flex: 1 }}
-                                />
-                                <FCButton
-                                    type="submit"
-                                    variant="primary"
-                                    disabled={loading || !customerId}
-                                    text={loading ? 'Searching...' : 'Search'}
-                                    style={{ marginLeft: '1rem', marginBottom: 0 }}
-                                />
+                                <div style={{ flex: 1 }}>
+                                    <FCInput
+                                        id="customerId"
+                                        type="text"
+                                        placeholder="Enter customer ID"
+                                        value={customerId}
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomerId(e.target.value)}
+                                        onValidate={() => {}}
+                                        validationText=""
+                                    />
+                                </div>
+                                <div style={{ marginLeft: '1rem', marginBottom: 0 }}>
+                                    <FCButton
+                                        type="submit"
+                                        variant="primary"
+                                        disabled={loading || !customerId}
+                                        text={loading ? 'Searching...' : 'Search'}
+                                    />
+                                </div>
                             </div>
                             <label htmlFor="customerId" style={{
                                 display: 'block',
@@ -320,128 +353,34 @@ export default function CustomerInfo() {
 
                         {/* Customer Details Grid */}
                         <div style={detailsGridStyle}>
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.dba || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    DBA
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.dba || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>DBA</div>
                             </div>
-
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.editApproval || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    Edit Approval
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.editApproval || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>Edit Approval</div>
                             </div>
-
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.complianceHold || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    Compliance Hold
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.complianceHold || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>Compliance Hold</div>
                             </div>
-
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.level || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    Level
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.level || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>Level</div>
                             </div>
-
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.paymentTermID || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    Payment Term ID
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.paymentTermID || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>Payment Term ID</div>
                             </div>
-
-                            <div>
-                                <div style={{
-                                    color: '#0b0c0d',
-                                    fontSize: '1rem',
-                                    fontWeight: '500'
-                                }}>
-                                    {customer.paymentMethod || 'N/A'}
-                                </div>
-                                <div style={{
-                                    color: '#7a868c',
-                                    fontSize: '0.875rem',
-                                    fontWeight: '600',
-                                    marginTop: '0.5rem',
-                                    textTransform: 'uppercase',
-                                    letterSpacing: '0.5px'
-                                }}>
-                                    Payment Method
-                                </div>
+                            <div style={{borderBottom: '1px solid #f2f2f2', padding: '1.1rem 0 0.7rem 0'}}>
+                                <div style={detailsFieldValueStyle}>{customer.paymentMethod || 'N/A'}</div>
+                                <div style={detailsFieldLabelStyle}>Payment Method</div>
                             </div>
                         </div>
                     </div>
                 )}
+
             </main>
 
             <style>{`
